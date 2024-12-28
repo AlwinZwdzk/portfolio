@@ -27,13 +27,23 @@
             Contact
         </a>
     </div>
+    @auth
     <div class="mt-4 space-y-4 px-6">
-        <a href="#" class="block w-full text-center px-6 py-3 bg-white text-primary border-2 border-primary rounded-md hover:bg-primary hover:text-white transition-colors text-lg">
-            Se connecter
+        <a href="{{route("logout")}}" onclick="document.getElementById('logout').submit(); return false;" class="block w-full text-center px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors text-lg">
+            Déconnexion
         </a>
-        <a href="#" class="block w-full text-center px-6 py-3 bg-primary text-white border-2 border-primary rounded-md hover:bg-primary/90 transition-colors text-lg">
-            S'inscrire
+        <form id="logout" action="{{route("logout")}}" method="post">
+            @csrf
+        </form>
+    @else
+    <div class="mt-4 space-y-4 px-6">
+        <a href="{{route("login")}}" class="block w-full text-center px-6 py-3 bg-white text-primary border-2 border-primary rounded-md hover:bg-primary hover:text-white transition-colors text-lg">
+            Connexion
+        </a>
+        <a href="{{route("register")}}" class="block w-full text-center px-6 py-3 bg-primary text-white border-2 border-primary rounded-md hover:bg-primary/90 transition-colors text-lg">
+            Inscription
         </a>
     </div>
+    @endauth
 </div>
 
