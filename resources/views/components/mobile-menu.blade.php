@@ -35,6 +35,7 @@
         <form id="logout" action="{{route("logout")}}" method="post">
             @csrf
         </form>
+    </div>
     @else
     <div class="mt-4 space-y-4 px-6">
         <a href="{{route("login")}}" class="block w-full text-center px-6 py-3 bg-white text-primary border-2 border-primary rounded-md hover:bg-primary hover:text-white transition-colors text-lg">
@@ -46,4 +47,3 @@
     </div>
     @endauth
 </div>
-
