@@ -2,8 +2,8 @@
     <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div class="flex justify-between h-20 items-center">
 
-            <a href="/" class="text-primary hover:text-primary/80 px-4 py-2 text-xl font-bold">
-                Portfolio
+            <a href="/" class="h-full">
+                <img src="{{Vite::asset('resources/images/logo.png')}}" alt="logo" class="h-full object-contain">
             </a>
 
             <x-desktop-menu></x-desktop-menu>
