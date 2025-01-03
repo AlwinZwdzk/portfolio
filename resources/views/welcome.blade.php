@@ -131,59 +131,24 @@
         </div>
 
     </body>
-    <footer class="bg-background py-12 mt-0">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <!-- Section 1: À propos -->
-                <div>
-                    <h3 class="text-xl font-semibold text-black">À propos</h3>
-                    <p class="mt-4 text-gray-600">Je suis un étudiant en informatique passionné par la technologie, l'innovation et la création de solutions logicielles.</p>
-                </div>
-
-                <!-- Section 2: Liens utiles -->
-                <div>
-                    <h3 class="text-xl font-semibold text-black">Liens utiles</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="#about" class="text-gray-600 hover:text-primary transition-colors">À propos</a></li>
-                        <li><a href="#trainings" class="text-gray-600 hover:text-primary transition-colors">Formations</a></li>
-                        <li><a href="#projects" class="text-gray-600 hover:text-primary transition-colors">Projets</a></li>
-                        <li><a href="#contact" class="text-gray-600 hover:text-primary transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Section 3: Contact -->
-                <div>
-                    <h3 class="text-xl font-semibold text-black">Contact</h3>
-                    <p class="mt-4 text-gray-600">Tu peux me contacter par e-mail ou via mes réseaux sociaux.</p>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="mailto:tonemail@example.com" class="text-gray-600 hover:text-primary transition-colors">tonemail@example.com</a></li>
-                        <li><a href="tel:+1234567890" class="text-gray-600 hover:text-primary transition-colors">+123 456 7890</a></li>
-                    </ul>
-                </div>
-
-                <!-- Section 4: Réseaux sociaux -->
-                <div>
-                    <h3 class="text-xl font-semibold text-black">Réseaux sociaux</h3>
-                    <div class="flex mt-4 space-x-6">
-                        <a href="#" class="text-gray-600 hover:text-primary transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-primary transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-primary transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-primary transition-colors">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
+    <footer class="bg-background py-12">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <!-- Section Réseaux Sociaux -->
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="{{Vite::asset('resources/images/mail.png')}}" alt="Mail" class="h-8 w-8">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="{{Vite::asset('resources/images/linkedin.png')}}" alt="LinkedIn" class="h-8 w-8">
+                </a>
+                <a href="https://github.com/AlwinZwdzk" target="_blank">
+                    <img src="{{Vite::asset('resources/images/github.png')}}" alt="Github" class="h-8 w-8">
+                </a>
             </div>
 
-            <!-- Copyright -->
-            <div class="mt-12 border-t border-gray-300 pt-6 text-center">
-                <p class="text-gray-600 text-sm">© 2024 Ton Nom. Tous droits réservés.</p>
+            <!-- Footer bottom -->
+            <div class="mt-8 text-center text-gray-600 text-sm">
+                © 2025 - Tous droits réservés | Conçu par Zawadzki Alwin
             </div>
         </div>
     </footer>
