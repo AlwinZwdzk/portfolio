@@ -57,19 +57,19 @@
             <section id="trainings" class="py-20 bg-gray-100">
                 <div class="max-w-7xl mx-auto px-6 sm:px-8">
                     <h2 class="text-3xl font-semibold text-center text-black">Formations</h2>
-                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <!-- Carte formation 1 -->
                         <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold text-primary">Bac +2 en Informatique</h3>
+                            <h3 class="text-xl font-semibold text-primary mb-4">Bac +2 en Informatique</h3>
                             <p class="mt-2 text-gray-600">J'ai appris les bases du développement et des technologies web ainsi que des concepts de programmation avancée.</p>
                         </div>
                         <!-- Carte formation 2 -->
                         <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold text-primary">Certification Java</h3>
+                            <h3 class="text-xl font-semibold text-primary mb-4">Certification Java</h3>
                             <p class="mt-2 text-gray-600">Certification sur les technologies Java et son écosystème pour renforcer mes compétences en développement logiciel.</p>
                         </div>
                         <!-- Carte formation 3 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
                             <h3 class="text-xl font-semibold text-primary">Cours de Python et Data Science</h3>
                             <p class="mt-2 text-gray-600">Formation pour maîtriser Python et appliquer ses compétences à l'analyse de données et à l'intelligence artificielle.</p>
                         </div>
@@ -81,21 +81,21 @@
             <section id="projects" class="py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-6 sm:px-8">
                     <h2 class="text-3xl font-semibold text-center text-black">Projets</h2>
-                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <!-- Projet 1 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
                             <h3 class="text-xl font-semibold text-primary">Système de gestion de processus</h3>
                             <p class="mt-2 text-gray-600">Un projet de gestion de processus en Java pour automatiser et surveiller les applications.</p>
                             <a href="#" class="text-blue-500 hover:underline">Voir le projet</a>
                         </div>
                         <!-- Projet 2 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
                             <h3 class="text-xl font-semibold text-primary">Application mobile de suivi de fitness</h3>
                             <p class="mt-2 text-gray-600">Application pour suivre l'entraînement et les progrès en musculation avec des notifications personnalisées.</p>
                             <a href="#" class="text-blue-500 hover:underline">Voir le projet</a>
                         </div>
                         <!-- Projet 3 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
                             <h3 class="text-xl font-semibold text-primary">Site de portfolio</h3>
                             <p class="mt-2 text-gray-600">Création d'un site portfolio avec des technologies web modernes pour présenter mes projets et compétences.</p>
                             <a href="#" class="text-blue-500 hover:underline">Voir le projet</a>
