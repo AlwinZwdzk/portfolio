@@ -56,7 +56,7 @@
 
             <section id="trainings" class="py-20 bg-gray-100">
                 <div class="max-w-7xl mx-auto px-6 sm:px-8">
-                    <h2 class="text-3xl font-semibold text-center text-black">Formations</h2>
+                    <h2 class="text-4xl font-semibold text-center text-black mb-10">Formations</h2>
                     <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <!-- Carte formation 1 -->
                         <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -80,7 +80,7 @@
 
             <section id="projects" class="py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-6 sm:px-8">
-                    <h2 class="text-3xl font-semibold text-center text-black">Projets</h2>
+                    <h2 class="text-4xl font-semibold text-center text-black mb-10">Projets</h2>
                     <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <!-- Projet 1 -->
                         <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
@@ -105,25 +105,65 @@
             </section>
 
 
-            <section id="contact" class="py-20 bg-gray-100">
-                <div class="max-w-7xl mx-auto px-6 sm:px-8">
-                    <h2 class="text-3xl font-semibold text-center text-black">Contact</h2>
-                    <p class="mt-4 text-lg text-gray-600 text-center">N'hésitez pas à me contacter pour toute question ou collaboration.</p>
-                    <div class="mt-10 flex justify-center">
-                        <form action="#" method="post" class="w-full max-w-md">
-                            <div class="flex flex-col mb-4">
-                                <label for="name" class="text-gray-700">Nom</label>
-                                <input type="text" id="name" name="name" class="mt-2 p-3 border border-gray-300 rounded-lg" required>
+            <section id="contact" class="py-16 bg-gradient-to-b from-gray-100 to-gray-200">
+                <div class="container mx-auto px-6 sm:px-8 lg:px-12">
+                    <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Contactez-moi</h2>
+                    <div class="max-w-3xl mx-auto bg-white p-10 rounded-lg shadow-2xl relative">
+                        <form action="https://getform.io/f/your-getform-endpoint" method="POST" class="space-y-8">
+                            <!-- Nom -->
+                            <div class="relative">
+                                <label for="name" class="absolute -top-3 left-3 bg-white px-2 text-sm text-gray-600">
+                                    Nom <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+                                    placeholder="Entrez votre nom"
+                                    required
+                                />
                             </div>
-                            <div class="flex flex-col mb-4">
-                                <label for="email" class="text-gray-700">Email</label>
-                                <input type="email" id="email" name="email" class="mt-2 p-3 border border-gray-300 rounded-lg" required>
+
+                            <!-- Email -->
+                            <div class="relative">
+                                <label for="email" class="absolute -top-3 left-3 bg-white px-2 text-sm text-gray-600">
+                                    Email <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+                                    placeholder="Entrez votre email"
+                                    required
+                                />
                             </div>
-                            <div class="flex flex-col mb-4">
-                                <label for="message" class="text-gray-700">Message</label>
-                                <textarea id="message" name="message" class="mt-2 p-3 border border-gray-300 rounded-lg" rows="5" required></textarea>
+
+                            <!-- Message -->
+                            <div class="relative">
+                                <label for="message" class="absolute -top-3 left-3 bg-white px-2 text-sm text-gray-600">
+                                    Message <span class="text-red-500">*</span>
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+                                    placeholder="Entrez votre message"
+                                    required
+                                ></textarea>
                             </div>
-                            <button type="submit" class="px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors">Envoyer</button>
+
+                            <!-- Bouton d'envoi -->
+                            <div class="text-center">
+                                <button
+                                    type="submit"
+                                    class="px-8 py-3 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all"
+                                >
+                                    Envoyer le message
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
