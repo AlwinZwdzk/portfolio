@@ -42,13 +42,39 @@
 
             <section id="about" class="py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-6 sm:px-8">
-                    <h2 class="text-3xl font-semibold text-center text-black">À propos de moi</h2>
-                    <p class="mt-4 text-lg text-gray-600 text-center">
-                        Je suis un étudiant en informatique passionné par le développement logiciel et la création de solutions innovantes.
-                    </p>
-                    <!-- Ajoute ici une image ou d'autres informations sur toi -->
-                    <div class="mt-10 flex justify-center">
-                        <img src="{{Vite::asset('resources/images/about-image.jpg')}}" alt="Image de moi" class="rounded-full w-40 h-40 object-cover">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-8">
+                            <div class="space-y-4">
+                                <h1 class="text-5xl font-bold text-black">
+                                    John Doe
+                                    <span class="block text-primary mt-2">Full Stack Developer</span>
+                                </h1>
+                                <p class="text-xl text-gray-600">
+                                    Passionate about creating beautiful and functional web experiences that make a difference.
+                                </p>
+                            </div>
+
+                            <div class="space-y-6">
+                                <h2 class="text-2xl font-semibold text-black">About Me</h2>
+                                <div class="prose text-gray-600 space-y-4">
+                                    <p>
+                                        With over 5 years of experience in web development, I specialize in building modern, responsive applications
+                                        using cutting-edge technologies. My expertise spans both frontend and backend development, with a particular
+                                        focus on React and Node.js ecosystems.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative flex justify-center">
+                            <div class="w-80 h-80 rounded-2xl overflow-hidden shadow-xl">
+                                <img
+                                    src="{{Vite::asset('resources/images/pp.jpg')}}"
+                                    alt="Profile photo"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
