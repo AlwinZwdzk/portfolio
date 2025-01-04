@@ -145,7 +145,9 @@
                 </div>
             </div>
 
-            <section id="contact" class="py-16 bg-gradient-to-b from-gray-100 to-gray-200">
+            <section id="contact" class="py-16 bg-pink-50 relative overflow-hidden">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+                <div class="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
                 <div class="container mx-auto px-6 sm:px-8 lg:px-12">
                     <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Contactez-moi</h2>
                     <div class="max-w-3xl mx-auto bg-white p-10 rounded-lg shadow-2xl relative">
