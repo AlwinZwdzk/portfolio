@@ -1,0 +1,72 @@
+.main-container {
+    padding-top: 0px; /* Ajoute un espace en haut pour compenser la hauteur du menu */
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        padding-top: 30px; /* Ajoute un padding-top seulement sur petit écran téléphone */
+    }
+}
+
+section {
+    min-height: 100vh; /* Prend au moins toute la hauteur de la fenêtre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Modal Styling */
+#project-modal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#modal-carousel {
+    width: 100%; /* Adapte la largeur à celle du modal */
+    position: relative;
+    overflow: hidden;
+}
+
+#carousel-images {
+    display: flex;
+    width: 100%; /* S'adapte à la largeur de l'écran */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    overflow: hidden; /* Supprime les barres de défilement */
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+#carousel-images img {
+    flex-shrink: 0;
+    width: 100%; /* Adapte à la largeur du modal */
+    height: auto;
+    max-height: 70vh; /* Images ne dépassant pas 70% de la hauteur de la fenêtre */
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Buttons */
+#prev-slide, #next-slide {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#prev-slide:hover, #next-slide:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}

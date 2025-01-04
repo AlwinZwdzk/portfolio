@@ -10,20 +10,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="icon" type="image/png" href="{{Vite::asset('resources/images/favicon.png')}}">
         @section("head")
-            @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/bootstrap.js'])
+            @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/bootstrap.js', 'resources/css/welcome.css'])'
         @show
-        <style>
-            .main-container {
-                padding-top: 0px; /* Ajoute un espace en haut pour compenser la hauteur du menu */
-            }
-
-            section {
-                min-height: 100vh; /* Prend au moins toute la hauteur de la fenêtre */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        </style>
     </head>
 
     <body>
@@ -90,33 +78,72 @@
                 </div>
             </section>
 
-
-            <section id="projects" class="py-20 bg-white">
-                <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <section id="projects" class="py-20 bg-white min-h-screen flex items-center">
+                <div class="max-w-7xl mx-auto px-6 sm:px-8 w-full">
                     <h2 class="text-4xl font-semibold text-center text-black mb-10">Projets</h2>
-                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
                         <!-- Projet 1 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
-                            <h3 class="text-xl font-semibold text-primary">Système de gestion de processus</h3>
-                            <p class="mt-2 text-gray-600">Un projet de gestion de processus en Java pour automatiser et surveiller les applications.</p>
-                            <a href="#" class="text-blue-500 hover:underline">Voir le projet</a>
+                        <div class="project-card cursor-pointer flex flex-col bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                            <h3 class="text-xl font-semibold text-primary mb-4 flex-grow">
+                                Système de gestion de processus
+                            </h3>
+                            <div class="w-full h-auto aspect-w-16 aspect-h-9">
+                                <img src="{{ Vite::asset('resources/images/pp.jpg') }}"
+                                     alt="Project 1"
+                                     class="w-full h-full object-cover rounded-lg">
+                            </div>
                         </div>
                         <!-- Projet 2 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
-                            <h3 class="text-xl font-semibold text-primary">Application mobile de suivi de fitness</h3>
-                            <p class="mt-2 text-gray-600">Application pour suivre l'entraînement et les progrès en musculation avec des notifications personnalisées.</p>
-                            <a href="#" class="text-blue-500 hover:underline">Voir le projet</a>
+                        <div class="project-card cursor-pointer flex flex-col bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                            <h3 class="text-xl font-semibold text-primary mb-4 flex-grow">
+                                Application mobile de suivi de fitness
+                            </h3>
+                            <div class="w-full h-auto aspect-w-16 aspect-h-9">
+                                <img src="{{ Vite::asset('resources/images/pp.jpg') }}"
+                                     alt="Project 2"
+                                     class="w-full h-full object-cover rounded-lg">
+                            </div>
                         </div>
                         <!-- Projet 3 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
-                            <h3 class="text-xl font-semibold text-primary">Site de portfolio</h3>
-                            <p class="mt-2 text-gray-600">Création d'un site portfolio avec des technologies web modernes pour présenter mes projets et compétences.</p>
-                            <a href="#" class="text-blue-500 hover:underline">Voir le projet</a>
+                        <div class="project-card cursor-pointer flex flex-col bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                            <h3 class="text-xl font-semibold text-primary mb-4 flex-grow">
+                                Site de portfolio
+                            </h3>
+                            <div class="w-full h-auto aspect-w-16 aspect-h-9">
+                                <img src="{{ Vite::asset('resources/images/pp.jpg') }}"
+                                     alt="Project 3"
+                                     class="w-full h-full object-cover rounded-lg">
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Modal -->
+            <div id="project-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full relative">
+                    <!-- Close Button -->
+                    <button id="close-modal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
+                        ✕
+                    </button>
+
+                    <!-- Modal Content -->
+                    <div class="p-6">
+                        <h2 id="modal-title" class="text-2xl font-bold text-black mb-4"></h2>
+                        <p id="modal-description" class="text-gray-600 mb-6"></p>
+
+                        <!-- Carrousel -->
+                        <div id="modal-carousel" class="relative">
+                            <div id="carousel-images" class="flex overflow-x-scroll gap-4">
+                                <!-- Images will be injected dynamically -->
+                            </div>
+                            <!-- Navigation Buttons -->
+                            <button id="prev-slide" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full shadow">←</button>
+                            <button id="next-slide" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full shadow">→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <section id="contact" class="py-16 bg-gradient-to-b from-gray-100 to-gray-200">
                 <div class="container mx-auto px-6 sm:px-8 lg:px-12">
