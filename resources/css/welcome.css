@@ -70,3 +70,48 @@ section {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
 }
+
+/* Style du bouton Ajouter un projet */
+.projects-button {
+    background-color: #4f46e5; /* Couleur principale */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.projects-button:hover {
+    background-color: #4338ca; /* Couleur au survol */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style de la pop-up */
+#tooltip {
+    background-color: #2d3748; /* Fond sombre */
+    color: white; /* Texte blanc */
+    border-radius: 0.5rem; /* Coins arrondis */
+    font-size: 0.875rem; /* Taille de texte */
+    text-align: center;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0; /* Caché par défaut */
+    pointer-events: none; /* Désactive les interactions */
+    transition: opacity 0.3s ease-in-out; /* Animation de fondu */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+}
+
+/* Triangle en dessous du tooltip */
+#tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* Pointe vers le bouton */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #2d3748 transparent;
+}
+

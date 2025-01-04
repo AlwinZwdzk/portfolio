@@ -112,3 +112,20 @@ document.addEventListener('DOMContentLoaded', () => {
     prevSlide.addEventListener('click', () => scrollCarousel('prev'));
     nextSlide.addEventListener('click', () => scrollCarousel('next'));
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('projects-button');
+    const tooltip = document.getElementById('tooltip');
+
+    if (tooltip) { // Tooltip existe uniquement si l'utilisateur n'est pas connecté
+        button.addEventListener('mouseover', () => {
+            tooltip.style.opacity = '1';
+            tooltip.style.pointerEvents = 'auto';
+        });
+
+        button.addEventListener('mouseout', () => {
+            tooltip.style.opacity = '0';
+            tooltip.style.pointerEvents = 'none';
+        });
+    }
+});
