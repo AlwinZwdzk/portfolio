@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\TrainingController::class, 'index'])->name('welcome');
 
-Route::get('/home', function () {
-    return view('welcome');
-})->middleware(['auth'])->name('home');
+Route::get('/home', [App\Http\Controllers\TrainingController::class, 'index'])->middleware(['auth'])->name('home');

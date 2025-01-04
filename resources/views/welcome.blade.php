@@ -14,7 +14,7 @@
         @show
         <style>
             .main-container {
-                padding-top: 80px; /* Ajoute un espace en haut pour compenser la hauteur du menu */
+                padding-top: 0px; /* Ajoute un espace en haut pour compenser la hauteur du menu */
             }
 
             section {
@@ -22,16 +22,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }
-
-            .section-box {
-                width: 80%; /* Largeur de la boîte */
-                max-width: 1200px; /* Largeur maximale de la boîte */
-                background-color: #ffffff; /* Couleur de fond de la boîte */
-                padding: 20px;
-                margin: 20px; /* Marge autour de la boîte */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de boîte */
-                border-radius: 8px; /* Coins arrondis */
             }
         </style>
     </head>
@@ -79,25 +69,22 @@
                 </div>
             </section>
 
-
-            <section id="trainings" class="py-20 bg-gray-100">
+            <section id="trainings" class="py-24 bg-pink-50 relative overflow-hidden">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+                <div class="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
                 <div class="max-w-7xl mx-auto px-6 sm:px-8">
-                    <h2 class="text-4xl font-semibold text-center text-black mb-10">Formations</h2>
-                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
-                        <!-- Carte formation 1 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold text-primary mb-4">Bac +2 en Informatique</h3>
-                            <p class="mt-2 text-gray-600">J'ai appris les bases du développement et des technologies web ainsi que des concepts de programmation avancée.</p>
-                        </div>
-                        <!-- Carte formation 2 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold text-primary mb-4">Certification Java</h3>
-                            <p class="mt-2 text-gray-600">Certification sur les technologies Java et son écosystème pour renforcer mes compétences en développement logiciel.</p>
-                        </div>
-                        <!-- Carte formation 3 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
-                            <h3 class="text-xl font-semibold text-primary">Cours de Python et Data Science</h3>
-                            <p class="mt-2 text-gray-600">Formation pour maîtriser Python et appliquer ses compétences à l'analyse de données et à l'intelligence artificielle.</p>
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl font-bold text-black mb-4">Educational Journey</h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            A chronological overview of my academic achievements and professional certifications.
+                        </p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary/20"></div>
+                        <div class="space-y-16">
+                            @foreach ($trainingsData as $index => $training)
+                                <x-training-card :training="$training" :index="$index" />
+                            @endforeach
                         </div>
                     </div>
                 </div>
