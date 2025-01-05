@@ -64,42 +64,27 @@
             <h2 class="text-4xl font-semibold text-center text-black mb-10">Projets</h2>
             <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Projet 1 -->
-                <div class="project-card cursor-pointer flex flex-col bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-                    <h3 class="text-xl font-semibold text-primary mb-4 flex-grow">
-                        Système de gestion de processus
-                    </h3>
-                    <div class="w-full h-auto aspect-w-16 aspect-h-9">
-                        <img src="{{ Vite::asset('resources/images/pp.jpg') }}"
-                             alt="Project 1"
-                             class="w-full h-full object-cover rounded-lg">
-                    </div>
-                </div>
+                <x-project-card
+                    title="Système de gestion de process"
+                    image="{{ Vite::asset('resources/images/pp.jpg') }}"
+                    alt="Project 1"
+                />
                 <!-- Projet 2 -->
-                <div class="project-card cursor-pointer flex flex-col bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-                    <h3 class="text-xl font-semibold text-primary mb-4 flex-grow">
-                        Application mobile de suivi de fitness
-                    </h3>
-                    <div class="w-full h-auto aspect-w-16 aspect-h-9">
-                        <img src="{{ Vite::asset('resources/images/pp.jpg') }}"
-                             alt="Project 2"
-                             class="w-full h-full object-cover rounded-lg">
-                    </div>
-                </div>
+                <x-project-card
+                    title="Système de gestion de process"
+                    image="{{ Vite::asset('resources/images/pp.jpg') }}"
+                    alt="Project 1"
+                />
                 <!-- Projet 3 -->
-                <div class="project-card cursor-pointer flex flex-col bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-                    <h3 class="text-xl font-semibold text-primary mb-4 flex-grow">
-                        Site de portfolio
-                    </h3>
-                    <div class="w-full h-auto aspect-w-16 aspect-h-9">
-                        <img src="{{ Vite::asset('resources/images/pp.jpg') }}"
-                             alt="Project 3"
-                             class="w-full h-full object-cover rounded-lg">
-                    </div>
-                </div>
+                <x-project-card
+                    title="Système de gestion de process"
+                    image="{{ Vite::asset('resources/images/pp.jpg') }}"
+                    alt="Project 1"
+                />
             </div>
-            <!-- Bouton Ajouter un projet -->
+            <!-- Bouton pour voir d'autres projets -->
             <div class="mt-12 text-center">
-                <a href="{{route('projets')}}" id="projects-button" class="projects-button inline-block px-8 py-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-dark transition-all duration-300">
+                <a href="{{route('projects')}}" id="projects-button" class="projects-button inline-block px-8 py-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-dark transition-all duration-300">
                     Voir d'autres projets
                 </a>
 

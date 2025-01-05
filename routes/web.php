@@ -10,5 +10,5 @@ Route::get('/projets', function () {
         session()->flash('message', 'Vous devez être connecté pour voir d\'autres projets.');
         return redirect()->route('login');
     }
-    return view('projets');
-})->name('projets');
+    return view('projects');
+})->name('projects');
