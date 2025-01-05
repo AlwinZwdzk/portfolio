@@ -12,6 +12,9 @@
         <a href="#contact" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
             Contact
         </a>
+        <a href="{{route('avis.index')}}" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
+            Avis
+        </a>
     </div>
 
 

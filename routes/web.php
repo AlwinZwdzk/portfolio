@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AvisController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrainingController;
 
@@ -12,3 +13,5 @@ Route::get('/projets', function () {
     }
     return view('projects');
 })->name('projects');
+
+Route::resource('avis', AvisController::class);

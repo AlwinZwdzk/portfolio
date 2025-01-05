@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<div class="min-h-screen bg-background main-container">
+<div class="min-h-screen main-container">
     <x-menu></x-menu>
     <main>
         {{$slot}}
