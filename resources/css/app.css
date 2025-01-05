@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main-container {
+    padding-top: 0px; /* Ajoute un espace en haut pour compenser la hauteur du menu */
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        padding-top: 30px; /* Ajoute un padding-top seulement sur petit écran téléphone */
+    }
+}
