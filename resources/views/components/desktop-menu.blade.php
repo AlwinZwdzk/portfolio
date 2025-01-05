@@ -1,15 +1,15 @@
 <div class="hidden lg:flex w-full justify-between items-center ml-12">
     <div class="flex items-center space-x-12">
-        <a href="#about" class="text-black hover:text-primary px-4 py-2 text-base font-medium whitespace-nowrap">
+        <a href="{{route('welcome')}}#about" class="text-black hover:text-primary px-4 py-2 text-base font-medium whitespace-nowrap">
             À propos
         </a>
-        <a href="#trainings" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
+        <a href="{{route('welcome')}}#trainings" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
             Formations
         </a>
-        <a href="#projects" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
+        <a href="{{route('welcome')}}#projects" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
             Projets
         </a>
-        <a href="#contact" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
+        <a href="{{route('welcome')}}#contact" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
             Contact
         </a>
         <a href="{{route('avis.index')}}" class="text-black hover:text-primary px-4 py-2 text-base font-medium">

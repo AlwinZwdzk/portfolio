@@ -14,16 +14,16 @@
 
 <div id="mobileMenu" class="lg:hidden absolute top-full left-0 w-full bg-background shadow-lg transition-all duration-300 ease-in-out max-h-0 opacity-0 invisible overflow-hidden">
     <div class="py-4 px-6 space-y-4">
-        <a href="#about" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+        <a href="{{route('welcome')}}#about" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
             About
         </a>
-        <a href="#trainings" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+        <a href="{{route('welcome')}}#trainings" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
             Trainings
         </a>
-        <a href="#projects" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+        <a href="{{route('welcome')}}#projects" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
             Projects
         </a>
-        <a href="#contact" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+        <a href="{{route('welcome')}}#contact" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
             Contact
         </a>
         <a href="{{route('avis.index')}}" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
