@@ -11,7 +11,7 @@ class Avis extends Model
 
     protected $table = 'avis';
 
-    protected $fillable = ['titre', 'commentaire', 'note'];
+    protected $fillable = ['titre', 'commentaire', 'note', 'user_id'];
 
     protected $casts = [
         'note' => 'integer',

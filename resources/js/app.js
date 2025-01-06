@@ -129,3 +129,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    function updateStars(rating) {
+        // Met à jour la valeur du champ caché avec la note sélectionnée
+        document.getElementById('note').value = rating;
+
+        // Récupère toutes les étoiles
+        const stars = document.querySelectorAll('.star-icon');
+
+        // Parcourt chaque étoile et change sa couleur
+        stars.forEach((star, index) => {
+            if (index < rating) {
+                star.classList.remove('text-gray-300'); // Supprime la couleur grise
+                star.classList.add('text-yellow-400'); // Ajoute la couleur jaune
+            } else {
+                star.classList.remove('text-yellow-400'); // Supprime la couleur jaune
+                star.classList.add('text-gray-300'); // Ajoute la couleur grise
+            }
+        });
+    }
+
+    // Ajoute les écouteurs d'événements aux boutons d'étoiles
+    document.querySelectorAll('.star-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const rating = button.getAttribute('data-value');
+            updateStars(rating);
+        });
+    });
+});
