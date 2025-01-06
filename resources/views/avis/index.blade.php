@@ -1,35 +1,53 @@
 <x-app>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-32 mb-20">
         <h1 class="text-4xl font-bold text-center text-gray-800 mb-16">Avis des utilisateurs</h1>
-        <div class="flex items-center space-x-3 mb-6">
-            <div class="flex items-center space-x-2 text-gray-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m0-6H3m9 0h9" />
-                </svg>
-                <span class="text-sm font-medium">Sort by:</span>
-            </div>
-            <form action="{{route('avis.index')}}" method="GET">
-                <select
-                    class="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-md px-3 py-2
-                   focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none cursor-pointer
-                   hover:border-gray-300 transition-colors"
-                    name="sortOption"
-                >
-                    <option value="newest">Most Recent</option>
-                    <option value="oldest">Oldest First</option>
-                    <option value="highest">Highest Rating</option>
-                    <option value="lowest">Lowest Rating</option>
-                </select>
-                <input
-                    type="submit"
-                    value="Valider"
-                    class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium cursor-pointer
-           hover:bg-opacity-90 focus:ring-2 focus:ring-primary/50 focus:outline-none
-           transition duration-200"
-                />
-            </form>
-        </div>
 
+        <!-- Ligne contenant le filtre et le bouton -->
+        <div class="flex flex-wrap-reverse justify-between items-center mb-6">
+            <!-- Filtre -->
+            <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2 text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m0-6H3m9 0h9" />
+                    </svg>
+                    <span class="text-sm font-medium">Sort by:</span>
+                </div>
+                <form action="{{ route('avis.index') }}" method="GET" class="flex items-center space-x-2">
+                    <select
+                        class="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-md px-3 py-2
+                       focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none cursor-pointer
+                       hover:border-gray-300 transition-colors"
+                        name="sortOption"
+                    >
+                        <option value="newest" {{ old('sortOption', request('sortOption')) == 'newest' ? 'selected' : '' }}>Plus récent</option>
+                        <option value="oldest" {{ old('sortOption', request('sortOption')) == 'oldest' ? 'selected' : '' }}>Plus ancien</option>
+                        <option value="highest" {{ old('sortOption', request('sortOption')) == 'highest' ? 'selected' : '' }}>Note la plus élevée</option>
+                        <option value="lowest" {{ old('sortOption', request('sortOption')) == 'lowest' ? 'selected' : '' }}>Note la plus basse</option>
+                    </select>
+                    <input
+                        type="submit"
+                        value="Valider"
+                        class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium cursor-pointer
+                   hover:bg-opacity-90 focus:ring-2 focus:ring-primary/50 focus:outline-none
+                   transition duration-200"
+                    />
+                </form>
+            </div>
+
+            <!-- Bouton Ajouter un avis -->
+            <div class="relative w-full sm:w-auto pb-5 sm:pb-0">
+                <a href="{{ route('avis.create') }}" id="avis-button"
+                   class="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors w-full sm:w-auto">
+                    Ajouter un avis
+                </a>
+                @guest()
+                <div id="popup" class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-4 py-2 bg-black text-white text-xs rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-200 z-50">
+                    Vous devez être connecté pour ajouter un avis.
+                </div>
+                @endguest
+            </div>
+
+        </div>
 
         <div class="space-y-8">
         @foreach($avis as $avis)
@@ -76,5 +94,6 @@
                 </div>
             </div>
         @endforeach
+        </div>
     </div>
 </x-app>

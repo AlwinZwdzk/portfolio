@@ -158,3 +158,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('avis-button');
+    const popup = document.getElementById('popup');
+
+    if (popup) {
+        button.addEventListener('mouseover', () => {
+            popup.style.opacity = '1';
+            popup.style.pointerEvents = 'auto';
+        });
+
+        button.addEventListener('mouseout', () => {
+            popup.style.opacity = '0';
+            popup.style.pointerEvents = 'none';
+        });
+    }
+});

@@ -87,12 +87,12 @@
                 <a href="{{route('projects')}}" id="projects-button" class="projects-button inline-block px-8 py-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-dark transition-all duration-300">
                     Voir d'autres projets
                 </a>
-
+                @guest()
                 <!-- Pop-up message -->
                 <div id="tooltip" class="absolute left-1/2 transform -translate-x-1/2 mt-2 px-4 py-2 bg-gray-800 text-white text-sm rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
                     Une connexion est nécessaire pour accéder à cette fonctionnalité.
                 </div>
-
+                @endguest
             </div>
         </div>
     </section>
