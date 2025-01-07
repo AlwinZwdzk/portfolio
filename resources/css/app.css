@@ -25,3 +25,18 @@
     object-fit: cover;
     border-radius: 8px;
 }
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+background-color: theme('colors.primary');
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+

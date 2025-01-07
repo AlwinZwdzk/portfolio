@@ -110,6 +110,9 @@
                             <span class="text-sm text-gray-700">PyCharm</span>
                         </div>
                     </div>
+                    <div class="mt-6">
+                        <a href="{{ Vite::asset('resources/files/cv.pdf') }}" class="btn btn-primary hover:bg-primary/90" target="_blank">Voir mon CV</a>
+                    </div>
                 </div>
 
                 <!-- Social Media Links -->
