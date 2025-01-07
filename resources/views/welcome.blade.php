@@ -136,7 +136,7 @@
         <div class="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
             <div class="text-center mb-24">
-                <h2 class="text-3xl font-bold text-black mb-4">Formations</h2>
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Formations</h2>
             </div>
             <div class="relative">
                 <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary/20"></div>
@@ -151,7 +151,7 @@
 
     <section id="projects" class="py-20 bg-white min-h-screen flex items-center">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 w-full">
-            <h2 class="text-4xl font-semibold text-center text-black mb-10">Projets</h2>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Projets</h2>
             <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Projet 1 -->
                 <x-project-card
@@ -187,7 +187,92 @@
         </div>
     </section>
 
-    <section id="contact" class="py-16 bg-pink-50 relative overflow-hidden">
+    <section class="py-24 bg-pink-50 relative">
+        <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Loisirs</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Traveling -->
+                <div class="group">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-w-16 aspect-h-9 relative">
+                            <div class="grid grid-cols-2 gap-1">
+                                <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&q=80" alt="Traveling 1" class="w-full h-48 object-cover" />
+                                <img src="https://www.lalechere.com/upload/temple-thailande.jpg" alt="Traveling 2" class="w-full h-48 object-cover" />
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                    <!-- Plane Icon -->
+                                    <img src="{{Vite::asset('resources/images/plane.svg')}}" alt="Mon SVG personnalisé" class="w-6 h-6">
+
+                                </div>
+                                <h3 class="text-xl font-semibold text-black">Voyager</h3>
+                            </div>
+                            <p class="text-gray-600">J'adore découvrir de nouveaux paysages et cultures. J'ai eu la chance d'avoir visit une dizaine de pays différents.</p>
+                        <br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports -->
+                <div class="group ">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-w-16 aspect-h-9 relative">
+                            <div class="grid grid-cols-2 gap-1">
+                                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80" alt="Sports 1" class="w-full h-48 object-cover" />
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80" alt="Sports 2" class="w-full h-48 object-cover" />
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                    <!-- Dumbbell Icon -->
+                                    <img src="{{Vite::asset('resources/images/dumbbell.svg')}}" alt="Mon SVG personnalisé" class="w-6 h-6">
+
+                                </div>
+                                <h3 class="text-xl font-semibold text-black">Sports</h3>
+                            </div>
+                            <p class="text-gray-600">J'aime regarder et pratiquer les différents sports. J'ai notamment joué au football plus de douze ans et je fais de la musculation depuis 2 ans. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming -->
+                <div class="group">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-2">
+                        <div class="aspect-w-16 aspect-h-9 relative">
+                            <div class="grid grid-cols-2 gap-1">
+                                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80" alt="Gaming 1" class="w-full h-48 object-cover" />
+                                <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&q=80" alt="Gaming 2" class="w-full h-48 object-cover" />
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                    <!-- Gamepad Icon -->
+                                    <img src="{{Vite::asset('resources/images/game.svg')}}" alt="Mon SVG personnalisé" class="w-6 h-6">
+
+                                </div>
+                                <h3 class="text-xl font-semibold text-black">Gaming</h3>
+                            </div>
+                            <p class="text-gray-600">J'aime jouer aux jeux vidéos comportant stratégie et esprit d'équipe comme Valorant.</p>
+                        <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="py-16 bg-white relative overflow-hidden">
         <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
         <div class="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
         <div class="container mx-auto px-6 sm:px-8 lg:px-12">
