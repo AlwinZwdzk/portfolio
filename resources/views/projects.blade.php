@@ -20,8 +20,15 @@
                 <div class="w-96">
                     <x-project-card
                         title="Bomberman - Application Java"
-                        image="{{ Vite::asset('resources/images/portfolio1.png') }}"
-                        alt="Project 1"
+                        image="{{ Vite::asset('resources/images/bomberman1.png') }}"
+                        alt="Bomberman"
+                    />
+                </div>
+                <div class="w-96">
+                    <x-project-card
+                        title="Le juste prix - Site Web"
+                        image="{{ Vite::asset('resources/images/justeprix2.png') }}"
+                        alt="Juste prix"
                     />
                 </div>
             </div>

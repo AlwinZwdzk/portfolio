@@ -7,6 +7,12 @@ import meditrip1 from '../images/meditrip1.png';
 import meditrip2 from '../images/meditrip2.png';
 import meditrip3 from '../images/meditrip3.png';
 import meditrip4 from '../images/meditrip4.png';
+import bomberman1 from '../images/bomberman1.png';
+import bomberman2 from '../images/bomberman2.png';
+import bomberman3 from '../images/bomberman3.png';
+import justePrix1 from '../images/justeprix1.png';
+import justePrix2 from '../images/justeprix2.png';
+import justePrix3 from '../images/justeprix3.png';
 
 // resources/js/menu.js
 
@@ -80,9 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'Nous avons reproduit ce jeu en Java avec JavaFX et Gradle en groupe de 4 étudiants. ' +
                 'La programmation orientée objet et et les patrons de conception ont été utilisé pour le développer le projet.',
             images: [
-                'resources/images/portfolio1.jpg',
-                'resources/images/portfolio2.jpg',
-                'resources/images/portfolio3.jpg',
+                bomberman1,
+                bomberman2,
+                bomberman3,
+            ],
+        },
+        {
+            title: 'Le juste prix',
+            description: 'Nous avons reproduit ce jeu en Java avec JavaFX et Gradle en groupe de 4 étudiants. ' +
+                'La programmation orientée objet et et les patrons de conception ont été utilisé pour le développer le projet.',
+            images: [
+                justePrix1,
+                justePrix2,
+                justePrix3,
             ],
         },
     ];

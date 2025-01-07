@@ -165,7 +165,7 @@
                 <!-- Projet 3 -->
                 <x-project-card
                     title="Bomberman - Application Java"
-                    image="{{ Vite::asset('resources/images/portfolio1.png') }}"
+                    image="{{ Vite::asset('resources/images/bomberman1.png') }}"
                     alt="Project 1"
                 />
             </div>
