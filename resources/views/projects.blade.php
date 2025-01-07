@@ -5,23 +5,23 @@
             <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center">
                 <div class="w-96">
                     <x-project-card
-                        title="Système de gestion de process"
-                        image="{{ Vite::asset('resources/images/pp.jpg') }}"
+                        title="Portfolio - Site web"
+                        image="{{ Vite::asset('resources/images/portfolio1.png') }}"
+                        alt="Portfolio"
+                    />
+                </div>
+                <div class="w-96">
+                    <x-project-card
+                        title="Méditrip - Site web"
+                        image="{{ Vite::asset('resources/images/meditrip1.png') }}"
+                        alt="Méditrip"
+                    />
+                </div>
+                <div class="w-96">
+                    <x-project-card
+                        title="Bomberman - Application Java"
+                        image="{{ Vite::asset('resources/images/portfolio1.png') }}"
                         alt="Project 1"
-                    />
-                </div>
-                <div class="w-96">
-                    <x-project-card
-                        title="Système de gestion de process"
-                        image="{{ Vite::asset('resources/images/pp.jpg') }}"
-                        alt="Project 2"
-                    />
-                </div>
-                <div class="w-96">
-                    <x-project-card
-                        title="Système de gestion de process"
-                        image="{{ Vite::asset('resources/images/pp.jpg') }}"
-                        alt="Project 3"
                     />
                 </div>
             </div>

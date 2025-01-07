@@ -8,26 +8,10 @@
              class="w-full h-full object-cover rounded-lg">
     </div>
 </div>
-<style>
-    /* Pour le conteneur */
-    .project-card {
-        max-width: 400px; /* Largeur maximale du conteneur */
-        height: 280px; /* Hauteur fixe pour uniformiser les cartes */
-    }
-
-    /* Pour l'image */
-    .project-card img {
-        width: 100%;
-        height: 180px; /* Hauteur fixe de l'image */
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-</style>
 
 <!-- Modal -->
 <div id="project-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full relative">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full max-h-[80vh] overflow-auto relative">
         <!-- Close Button -->
         <button id="close-modal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
             ✕

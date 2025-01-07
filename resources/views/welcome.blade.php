@@ -1,38 +1,128 @@
 <x-app>
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="sm:mt-32 my-20 bg-white">
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="space-y-4">
-                        <h1 class="text-5xl font-bold text-black">
-                            John Doe
-                            <span class="block text-primary mt-2">Full Stack Developer</span>
-                        </h1>
-                        <p class="text-xl text-gray-600">
-                            Passionate about creating beautiful and functional web experiences that make a difference.
-                        </p>
-                    </div>
-
-                    <div class="space-y-6">
-                        <h2 class="text-2xl font-semibold text-black">About Me</h2>
-                        <div class="prose text-gray-600 space-y-4">
-                            <p>
-                                With over 5 years of experience in web development, I specialize in building modern, responsive applications
-                                using cutting-edge technologies. My expertise spans both frontend and backend development, with a particular
-                                focus on React and Node.js ecosystems.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative flex justify-center">
-                    <div class="w-80 h-80 rounded-2xl overflow-hidden shadow-xl">
+            <!-- Profile Section -->
+            <div class="flex flex-col items-center mb-12 lg:flex-row lg:justify-between lg:mb-20">
+                <!-- Image (First on mobile, second on desktop) -->
+                <div class="w-64 h-64 mb-8 lg:w-72 lg:h-72 lg:order-2 lg:mb-0">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
                         <img
                             src="{{Vite::asset('resources/images/pp.jpg')}}"
                             alt="Profile photo"
                             class="w-full h-full object-cover"
                         />
                     </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="text-center lg:text-left lg:order-1 lg:max-w-xl">
+                    <h1 class="text-5xl font-bold text-black mb-4">
+                        Alwin Zawadzki
+                        <span class="block text-primary mt-2">Développeur junior en informatique</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Recherche de stage en développement d’application et/ou web
+                    </p>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-black mb-4">À propos</h2>
+                        <div class="prose text-gray-600">
+                            <p>
+                                Il y a environ sept ans, au collège, j'ai fait mes premiers pas dans l'informatique, grâce au logiciel Scratch.
+                                Très vite, j'ai su que mon avenir professionnel serait dans ce domaine. J'ai compris que ce qui m'animait,
+                                c'est la combinaison de l'aspect logique des mathématiques et le concret de la réalisation d'applications.
+                                Aujourd'hui, j'étudie le développement, les bases de données ainsi que les systèmes et réseaux à l'IUT de Lens
+                                afin d'obtenir le BUT Informatique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Section -->
+            <div class="space-y-12">
+                <!-- Languages and Frameworks in 2 columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Languages -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-black mb-6">Langages</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-6 h-6" alt="PHP"/>
+                                <span class="text-sm text-gray-700">PHP</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-6 h-6" alt="Java"/>
+                                <span class="text-sm text-gray-700">Java</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-6 h-6" alt="Python"/>
+                                <span class="text-sm text-gray-700">Python</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                                <img src="{{Vite::asset('resources/images/sql.svg')}}" class="w-6 h-6" alt="SQL"/>
+                                <span class="text-sm text-gray-700">SQL</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" class="w-6 h-6" alt="Bash"/>
+                                <span class="text-sm text-gray-700">Bash</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-black mb-6">Frameworks</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                                <img src="{{Vite::asset('resources/images/Laravel.svg')}}" class="w-6 h-6" alt="Laravel"/>
+                                <span class="text-sm text-gray-700">Laravel</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" class="w-6 h-6" alt="Flask"/>
+                                <span class="text-sm text-gray-700">Flask</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-6 h-6" alt="JavaFX"/>
+                                <span class="text-sm text-gray-700">JavaFX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools (Full Width) -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-black mb-6">Outils</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-6 h-6" alt="Git"/>
+                            <span class="text-sm text-gray-700">Git</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg" class="w-6 h-6" alt="PhpStorm"/>
+                            <span class="text-sm text-gray-700">PhpStorm</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" class="w-6 h-6" alt="IntelliJ IDEA"/>
+                            <span class="text-sm text-gray-700">IDEA</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" class="w-6 h-6" alt="PyCharm"/>
+                            <span class="text-sm text-gray-700">PyCharm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex justify-center gap-6 pt-4">
+                    <a href="mailto:alwin.zawadzki@gmail.com" class="hover:opacity-80 transition-opacity">
+                        <img src="{{Vite::asset('resources/images/mail.png')}}" alt="Mail" class="h-8 w-8">
+                    </a>
+                    <a href="https://www.linkedin.com/in/alwin-zawadzki/" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="{{Vite::asset('resources/images/linkedin.png')}}" alt="LinkedIn" class="h-8 w-8">
+                    </a>
+                    <a href="https://github.com/AlwinZwdzk" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="{{Vite::asset('resources/images/github.png')}}" alt="Github" class="h-8 w-8">
+                    </a>
                 </div>
             </div>
         </div>
@@ -42,11 +132,8 @@
         <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
         <div class="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-black mb-4">Educational Journey</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    A chronological overview of my academic achievements and professional certifications.
-                </p>
+            <div class="text-center mb-24">
+                <h2 class="text-3xl font-bold text-black mb-4">Formations</h2>
             </div>
             <div class="relative">
                 <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary/20"></div>
@@ -65,20 +152,20 @@
             <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Projet 1 -->
                 <x-project-card
-                    title="Système de gestion de process"
-                    image="{{ Vite::asset('resources/images/pp.jpg') }}"
-                    alt="Project 1"
+                    title="Portfolio - Site web"
+                    image="{{ Vite::asset('resources/images/portfolio1.png') }}"
+                    alt="Portfolio"
                 />
                 <!-- Projet 2 -->
                 <x-project-card
-                    title="Système de gestion de process"
-                    image="{{ Vite::asset('resources/images/pp.jpg') }}"
-                    alt="Project 1"
+                    title="Méditrip - Site web"
+                    image="{{ Vite::asset('resources/images/meditrip1.png') }}"
+                    alt="Méditrip"
                 />
                 <!-- Projet 3 -->
                 <x-project-card
-                    title="Système de gestion de process"
-                    image="{{ Vite::asset('resources/images/pp.jpg') }}"
+                    title="Bomberman - Application Java"
+                    image="{{ Vite::asset('resources/images/portfolio1.png') }}"
                     alt="Project 1"
                 />
             </div>

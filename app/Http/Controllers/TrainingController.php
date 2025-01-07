@@ -10,22 +10,22 @@ class TrainingController extends Controller
     {
         $trainingsData = [
             [
-                'year' => '2023',
-                'title' => 'Master in Computer Science',
-                'institution' => 'Stanford University',
-                'description' => 'Specialized in Artificial Intelligence and Machine Learning with a focus on Neural Networks.',
+                'year' => '2023 - Aujourd\'hui',
+                'title' => 'Bachelor Universitaire de Technologie - Informatique',
+                'institution' => 'IUT - Lens',
+                'description' => 'Actuellement en deuxième année.',
             ],
             [
-                'year' => '2021',
-                'title' => 'Bachelor in Computer Science',
-                'institution' => 'MIT',
-                'description' => 'Core computer science fundamentals with emphasis on software engineering practices.',
+                'year' => '2022-2023',
+                'title' => 'Ecole d\'ingénieur en informatique et industriel',
+                'institution' => 'IG2I Centrale Lille - Lens',
+                'description' => 'J\'ai décidé de me réorienter à l\'issu de la première pour me concentrer sur l\'informatique.',
             ],
             [
-                'year' => '2018',
-                'title' => 'Web Development Bootcamp',
-                'institution' => 'Coding Academy',
-                'description' => 'Intensive training in modern web technologies including React, Node.js, and databases.',
+                'year' => '2022',
+                'title' => 'Baccaulauréat général',
+                'institution' => 'Lycée Anatole France - Lillers ',
+                'description' => 'Mention bien avec les spécialités Mathématiques et Numérique et Sciences Informatiques (NSI)',
             ],
         ];
 

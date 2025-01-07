@@ -1,5 +1,12 @@
 import './bootstrap';
 import pp from '../images/pp.jpg';
+import portfolio1 from '../images/portfolio1.png';
+import portfolio2 from '../images/portfolio2.png';
+import portfolio3 from '../images/portfolio3.png';
+import meditrip1 from '../images/meditrip1.png';
+import meditrip2 from '../images/meditrip2.png';
+import meditrip3 from '../images/meditrip3.png';
+import meditrip4 from '../images/meditrip4.png';
 
 // resources/js/menu.js
 
@@ -44,26 +51,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sample project data
     const projects = [
         {
-            title: 'Système de gestion de processus',
-            description: 'Un projet avancé pour gérer les processus...',
+            title: 'Portfolio',
+            description: 'J\'ai créé ce portfolio pour présenter mes projets et compétences. ' +
+                'Je l\'ai développé à l\'aide de Laravel et Tailwind CSS. '+
+                'J\'ai utilisé Laravel afin de me perfectionner ' +
+                'et montrer mes compétences en back-end. J\'ai notamment géré les droits et de l\'authentification et créé un CRUD.',
             images: [
-                pp,
-                pp,
-                pp,
+                portfolio1,
+                portfolio2,
+                portfolio3,
             ],
         },
         {
-            title: 'Application mobile de suivi de fitness',
-            description: 'Une application mobile complète pour gérer vos entraînements.',
+            title: 'Méditrip',
+            description: 'Ce projet Laravel a été réalisé lors du Marathon du Web, un événement où nous devions créer un site web en 48h sans pause. ' +
+                'Notre équipe informatique de trois étudiants était accompagnée de quatre étudiants de la filière MMI pour faire le design du site. '+
+                'Méditrip est un site qui répertorie les voyages en Méditerranée effectués par les utilisateurs de l\'application. ' +
+                'Il est aussi possible de créer, modifier, supprimer un voyage en ajoutant, modifiant ou supprimant des étapes.',
             images: [
-                'resources/images/fitness1.jpg',
-                'resources/images/fitness2.jpg',
-                'resources/images/fitness3.jpg',
+                meditrip1,
+                meditrip2,
+                meditrip3,
+                meditrip4,
             ],
         },
         {
-            title: 'Site de portfolio',
-            description: 'Un portfolio personnel interactif et moderne.',
+            title: 'Bomberman',
+            description: 'Nous avons reproduit ce jeu en Java avec JavaFX et Gradle en groupe de 4 étudiants. ' +
+                'La programmation orientée objet et et les patrons de conception ont été utilisé pour le développer le projet.',
             images: [
                 'resources/images/portfolio1.jpg',
                 'resources/images/portfolio2.jpg',
