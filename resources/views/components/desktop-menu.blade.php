@@ -1,5 +1,5 @@
 <div class="hidden lg:flex w-full justify-between items-center ml-12">
-    <div class="flex items-center space-x-12">
+    <div class="flex items-center space-x-8">
         <a href="{{route('welcome')}}#about" class="text-black hover:text-primary px-4 py-2 text-base font-medium whitespace-nowrap">
             À propos
         </a>
@@ -8,6 +8,9 @@
         </a>
         <a href="{{route('welcome')}}#projects" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
             Projets
+        </a>
+        <a href="{{route('welcome')}}#hobbies" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
+            Loisirs
         </a>
         <a href="{{route('welcome')}}#contact" class="text-black hover:text-primary px-4 py-2 text-base font-medium">
             Contact

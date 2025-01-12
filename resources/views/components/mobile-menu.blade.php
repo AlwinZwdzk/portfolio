@@ -14,24 +14,27 @@
 
 <div id="mobileMenu" class="lg:hidden absolute top-full left-0 w-full bg-background shadow-lg transition-all duration-300 ease-in-out max-h-0 opacity-0 invisible overflow-hidden">
     <div class="py-4 px-6 space-y-4">
-        <a href="{{route('welcome')}}#about" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
-            About
+        <a href="{{route('welcome')}}#about" class="menu-link block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+            À propos
         </a>
-        <a href="{{route('welcome')}}#trainings" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
-            Trainings
+        <a href="{{route('welcome')}}#trainings" class="menu-link block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+            Formations
         </a>
-        <a href="{{route('welcome')}}#projects" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
-            Projects
+        <a href="{{route('welcome')}}#projects" class="menu-link block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+            Projets
         </a>
-        <a href="{{route('welcome')}}#contact" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+        <a href="{{route('welcome')}}#hobbies" class="menu-link block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+            Loisirs
+        </a>
+        <a href="{{route('welcome')}}#contact" class="menu-link block text-center text-lg font-medium text-black hover:text-primary transition-colors">
             Contact
         </a>
-        <a href="{{route('avis.index')}}" class="block text-center text-lg font-medium text-black hover:text-primary transition-colors">
+        <a href="{{route('avis.index')}}" class="menu-link block text-center text-lg font-medium text-black hover:text-primary transition-colors">
             Avis
         </a>
     </div>
     @auth
-    <div class="mt-4 space-y-4 px-6">
+    <div class="mt-4 space-y-4 px-6 ">
         <a href="{{route("logout")}}" onclick="document.getElementById('logout').submit(); return false;" class="block w-full text-center px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors text-lg">
             Déconnexion
         </a>
