@@ -11,7 +11,7 @@
 
 <!-- Modal -->
 <div id="project-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full max-h-[80vh] overflow-auto relative">
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full max-h-[150vh] overflow-auto relative">
         <!-- Close Button -->
         <button id="close-modal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
             ✕
@@ -23,18 +23,15 @@
             <p id="modal-description" class="text-gray-600 mb-6"></p>
 
             <!-- Carrousel -->
-            <div id="modal-carousel" class="relative">
-                <div id="carousel-images" class="flex overflow-x-scroll gap-4">
+            <div id="modal-carousel"  class="relative">
+                <div id="carousel-images" class="flex overflow-x-scroll gap-4 max-h-[55vh]">
                     <!-- Images will be injected dynamically -->
                 </div>
                 <!-- Navigation Buttons -->
                 <button id="prev-slide" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full shadow">←</button>
                 <button id="next-slide" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full shadow">→</button>
             </div>
-            <button class="like-button mt-4 flex items-center gap-2 text-gray-600 hover:text-primary transition-colors" data-project-id="2">
-                <i class="fas fa-heart"></i>
-                <span class="likes-count">0</span>
-            </button>
+
         </div>
     </div>
 </div>
