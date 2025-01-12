@@ -9,6 +9,10 @@ section {
     animation: fadeIn 0.3s ease-out;
 }
 
+#about {
+    scroll-margin-top: 120px; /* Décalage pour tenir compte d'une barre de navigation fixe */
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

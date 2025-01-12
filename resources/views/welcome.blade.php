@@ -8,7 +8,7 @@
                     <div class="rounded-2xl overflow-hidden shadow-xl">
                         <img
                             src="{{Vite::asset('resources/images/pp.jpg')}}"
-                            alt="Profile photo"
+                            alt="Photo de profil"
                             class="w-full h-full object-cover"
                         />
                     </div>
@@ -21,16 +21,16 @@
                         <span class="block text-primary mt-2">Développeur junior en informatique</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8">
-                        Recherche de stage en développement d’application et/ou web
+                        Recherche de stage en développement d’application et/ou développement web
                     </p>
                     <div>
                         <h2 class="text-2xl font-semibold text-black mb-4">À propos</h2>
                         <div class="prose text-gray-600">
                             <p>
                                 Il y a environ sept ans, au collège, j'ai fait mes premiers pas dans l'informatique, grâce au logiciel Scratch.
-                                Très vite, j'ai su que mon avenir professionnel serait dans ce domaine. J'ai compris que ce qui m'animait,
+                                Très vite, j'ai su que mon avenir professionnel serait dans ce domaine. Ce qui m'anime,
                                 c'est la combinaison de l'aspect logique des mathématiques et le concret de la réalisation d'applications.
-                                Aujourd'hui, j'étudie le développement, les bases de données ainsi que les systèmes et réseaux à l'IUT de Lens
+                                Aujourd'hui, j'étudie le développement, la gestion de bases de données ainsi que les systèmes et réseaux à l'IUT de Lens
                                 afin d'obtenir le BUT Informatique.
                             </p>
                         </div>
@@ -187,7 +187,7 @@
         </div>
     </section>
 
-    <section class="py-24 bg-pink-50 relative">
+    <section id="hobbies" class="py-24 bg-pink-50 relative">
         <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
 
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
@@ -201,20 +201,20 @@
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-2">
                         <div class="aspect-w-16 aspect-h-9 relative">
                             <div class="grid grid-cols-2 gap-1">
-                                <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&q=80" alt="Traveling 1" class="w-full h-48 object-cover" />
-                                <img src="https://www.lalechere.com/upload/temple-thailande.jpg" alt="Traveling 2" class="w-full h-48 object-cover" />
+                                <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&q=80" alt="Voyage 1" class="w-full h-48 object-cover" />
+                                <img src="https://www.lalechere.com/upload/temple-thailande.jpg" alt="Voyage 2" class="w-full h-48 object-cover" />
                             </div>
                         </div>
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="p-2 bg-primary/10 rounded-lg text-primary">
                                     <!-- Plane Icon -->
-                                    <img src="{{Vite::asset('resources/images/plane.svg')}}" alt="Mon SVG personnalisé" class="w-6 h-6">
+                                    <img src="{{Vite::asset('resources/images/plane.svg')}}" alt="Avion" class="w-6 h-6">
 
                                 </div>
                                 <h3 class="text-xl font-semibold text-black">Voyager</h3>
                             </div>
-                            <p class="text-gray-600">J'adore découvrir de nouveaux paysages et cultures. J'ai eu la chance d'avoir visit une dizaine de pays différents.</p>
+                            <p class="text-gray-600">J'adore découvrir de nouveaux paysages et cultures. J'ai eu la chance d'avoir visité une dizaine de pays différents.</p>
                         <br>
                         </div>
                     </div>
@@ -225,15 +225,15 @@
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-2">
                         <div class="aspect-w-16 aspect-h-9 relative">
                             <div class="grid grid-cols-2 gap-1">
-                                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80" alt="Sports 1" class="w-full h-48 object-cover" />
-                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80" alt="Sports 2" class="w-full h-48 object-cover" />
+                                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80" alt="Sport 1" class="w-full h-48 object-cover" />
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80" alt="Sport 2" class="w-full h-48 object-cover" />
                             </div>
                         </div>
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="p-2 bg-primary/10 rounded-lg text-primary">
                                     <!-- Dumbbell Icon -->
-                                    <img src="{{Vite::asset('resources/images/dumbbell.svg')}}" alt="Mon SVG personnalisé" class="w-6 h-6">
+                                    <img src="{{Vite::asset('resources/images/dumbbell.svg')}}" alt="Haltère" class="w-6 h-6">
 
                                 </div>
                                 <h3 class="text-xl font-semibold text-black">Sports</h3>
@@ -249,14 +249,14 @@
                         <div class="aspect-w-16 aspect-h-9 relative">
                             <div class="grid grid-cols-2 gap-1">
                                 <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80" alt="Gaming 1" class="w-full h-48 object-cover" />
-                                <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&q=80" alt="Gaming 2" class="w-full h-48 object-cover" />
+                                <img src="{{Vite::asset('resources/images/valorant.png')}}" alt="Gaming 2" class="w-full h-48 object-cover" />
                             </div>
                         </div>
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="p-2 bg-primary/10 rounded-lg text-primary">
                                     <!-- Gamepad Icon -->
-                                    <img src="{{Vite::asset('resources/images/game.svg')}}" alt="Mon SVG personnalisé" class="w-6 h-6">
+                                    <img src="{{Vite::asset('resources/images/game.svg')}}" alt="Manette" class="w-6 h-6">
 
                                 </div>
                                 <h3 class="text-xl font-semibold text-black">Gaming</h3>
@@ -278,7 +278,7 @@
         <div class="container mx-auto px-6 sm:px-8 lg:px-12">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Contactez-moi</h2>
             <div class="max-w-3xl mx-auto bg-white p-10 rounded-lg shadow-2xl relative">
-                <form action="https://getform.io/f/your-getform-endpoint" method="POST" class="space-y-8">
+                <form action="https://getform.io/f/bolljlna" method="POST" class="space-y-8">
                     <!-- Nom -->
                     <div class="relative">
                         <label for="name" class="absolute -top-3 left-3 bg-white px-2 text-sm text-gray-600">
