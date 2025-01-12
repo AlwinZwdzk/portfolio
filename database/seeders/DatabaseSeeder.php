@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         User::factory([
-            'name' => "Robert Duchmol",
-            'email' => "robert.duchmol@domain.fr",
+            'name' => "Alwin Zawadzki",
+            'email' => "alwin@gmail.com",
             'email_verified_at' => now(),
             'password' => Hash::make('GrosSecret'),
             'remember_token' => Str::random(10),
             'role' => Role::ADMIN,
         ])->create();
-        Avis::factory(10)->create();
+        Avis::factory(2)->create();
     }
 }

@@ -36,9 +36,10 @@ class AvisController extends Controller
 
     public function create()
     {
-        if (!auth()->check()) {
-            session()->flash('message', 'Vous devez être connecté pour créer un avis.');
-            return redirect()->route('login');
+        $user = auth()->user();
+        if ($user->cannot('create', Avis::class)) {
+            return redirect()->route('avis.index')
+                ->with('status', 'Vous ne pouvez créer qu\'un seul avis.');
         }
         return view('avis.create');
     }
@@ -46,14 +47,46 @@ class AvisController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'titre' => 'required|string',
             'commentaire' => 'required|string',
             'note' => 'required|integer',
         ]);
 
         $validatedData['user_id'] = $request->user()->id;
 
-        $avis = Avis::create($validatedData);
+        Avis::create($validatedData);
+
+        return redirect()->route('avis.index');
+    }
+
+    public function destroy(int $id)
+    {
+        $avis = Avis::findOrFail($id);
+        $user = auth()->user();
+        if($user->can('delete', $avis)) {
+            $avis->delete();
+        }
+        return redirect()->route('avis.index');
+    }
+
+    public function edit(int $id)
+    {
+        $avis = Avis::findOrFail($id);
+        if (request()->user()->can('update', $avis)) {
+            return view('avis.edit', ['avis' => $avis]);
+        }
+        return redirect()->route('avis.index');
+    }
+
+    public function update(Request $request, int $id)
+    {
+        $avis = Avis::findOrFail($id);
+        if ($request->user()->can('update', $avis)) {
+            $data = request()->validate([
+                'commentaire' => 'required|string|max:255',
+                'note' => 'required|int',
+            ]);
+            $avis->update($data);
+        }
 
         return redirect()->route('avis.index');
     }

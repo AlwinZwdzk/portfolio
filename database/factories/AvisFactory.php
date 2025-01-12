@@ -17,8 +17,7 @@ class AvisFactory extends Factory
     public function definition(): array
     {
         return [
-            'titre' => $this->faker->sentence(),
-            'commentaire' => $this->faker->text(),
+            'commentaire' => 'Ceci est un faux commentaire à des fins de tests et démonstrations.',
             'note' => $this->faker->numberBetween(1, 5),
             'user_id' => 1,
         ];

@@ -15,7 +15,6 @@ return new class extends Migration
         Schema::create('avis', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('titre');
             $table->text('commentaire');
             $table->unsignedTinyInteger('note');
             $table->foreignIdFor(User::class)->constrained()->onUpdate('cascade')->onDelete('cascade');

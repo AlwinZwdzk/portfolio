@@ -1,6 +1,14 @@
 <x-app>
+    @if (session('status'))
+        <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div class="bg-white p-6 rounded shadow-lg text-center">
+                <p style="font-size: 30px">{{ session('status') }}</p>
+                <button onclick="document.getElementById('popup').style.display = 'none';" class="mt-4 bg-primary text-white px-4 py-2 rounded-md">Fermer</button>
+            </div>
+        </div>
+    @endif
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-32 mb-20">
-        <h1 class="text-4xl font-bold text-center text-gray-800 mb-16">Avis des utilisateurs</h1>
+
 
         <!-- Ligne contenant le filtre et le bouton -->
         <div class="flex flex-wrap-reverse justify-between items-center mb-6">
@@ -10,7 +18,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m0-6H3m9 0h9" />
                     </svg>
-                    <span class="text-sm font-medium">Sort by:</span>
+                    <span class="text-sm font-medium">Trier par:</span>
                 </div>
                 <form action="{{ route('avis.index') }}" method="GET" class="flex items-center space-x-2">
                     <select
@@ -81,9 +89,12 @@
                 </div>
                 <!-- Boutons Éditer et Supprimer -->
                 <div class="flex justify-end mt-4 space-x-4">
+                    @can('update', $avis)
                     <a href="{{ route('avis.edit', $avis->id) }}" class="text-primary hover:text-pink-500 font-semibold">
                         Éditer
                     </a>
+                    @endcan
+                    @can('delete', $avis)
                     <form action="{{ route('avis.destroy', $avis->id) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet avis ?');">
                         @csrf
                         @method('DELETE')
@@ -91,6 +102,7 @@
                             Supprimer
                         </button>
                     </form>
+                    @endcan
                 </div>
             </div>
         @endforeach

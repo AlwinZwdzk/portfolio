@@ -47,4 +47,9 @@ class User extends Authenticatable
             'role' => Role::class,
         ];
     }
+
+    public function avis()
+    {
+        return $this->hasMany(Avis::class, 'user_id');
+    }
 }

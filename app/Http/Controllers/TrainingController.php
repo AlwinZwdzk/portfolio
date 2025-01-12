@@ -19,7 +19,7 @@ class TrainingController extends Controller
                 'year' => '2022-2023',
                 'title' => 'Ecole d\'ingénieur en informatique et industriel',
                 'institution' => 'IG2I Centrale Lille - Lens',
-                'description' => 'J\'ai décidé de me réorienter à l\'issu de la première pour me concentrer sur l\'informatique.',
+                'description' => 'J\'ai décidé de me réorienter à l\'issu de la première année pour me concentrer sur l\'informatique.',
             ],
             [
                 'year' => '2022',

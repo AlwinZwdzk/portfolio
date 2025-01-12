@@ -1,24 +1,10 @@
 <x-app>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-32 mb-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-32">
         <h1 class="text-4xl font-bold text-center text-gray-800 mb-16">Ajouter un avis</h1>
-        <form action="{{ route('avis.store') }}" method="POST" class="bg-gray-50 rounded-lg shadow-md p-6">
+        <form action="{{ route('avis.store') }}" method="POST" class="bg-gray-50 rounded-lg shadow-md p-10 max-w-lg mx-auto ">
         @csrf
         <div class="space-y-4">
-            <!-- Input for Name -->
-            <div>
-                <label for="titre" class="block text-sm font-medium text-gray-700 mb-1">
-                    Name
-                </label>
-                <input
-                    type="text"
-                    id="titre"
-                    name="titre"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary/50 focus:border-primary"
-                    required
-                />
-            </div>
-
-            <!-- Rating -->
+              <!-- Rating -->
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">
                     Note
@@ -40,53 +26,53 @@
                         </button>
                     @endfor
                 </div>
-                <input type="hidden" name="note" id="note" value="0">
+                <input type="hidden" name="note" id="note" value="1">
 
-                <script>
-                    function updateStars(rating) {
-                        // Met à jour la valeur du champ caché avec la note sélectionnée
-                        document.getElementById('note').value = rating;
+                    <script>
+                        function updateStars(rating) {
+                            // Met à jour la valeur du champ caché avec la note sélectionnée
+                            document.getElementById('note').value = rating;
 
-                        // Récupère toutes les étoiles
-                        const stars = document.querySelectorAll('.star-icon');
+                            // Récupère toutes les étoiles
+                            const stars = document.querySelectorAll('.star-icon');
 
-                        // Parcourt chaque étoile et change sa couleur
-                        stars.forEach((star, index) => {
-                            if (index < rating) {
-                                star.classList.remove('text-gray-300'); // Supprime la couleur grise
-                                star.classList.add('text-yellow-400'); // Ajoute la couleur jaune
-                            } else {
-                                star.classList.remove('text-yellow-400'); // Supprime la couleur jaune
-                                star.classList.add('text-gray-300'); // Ajoute la couleur grise
-                            }
-                        });
-                    }
-                </script>
+                            // Parcourt chaque étoile et change sa couleur
+                            stars.forEach((star, index) => {
+                                if (index < rating) {
+                                    star.classList.remove('text-gray-300'); // Supprime la couleur grise
+                                    star.classList.add('text-yellow-400'); // Ajoute la couleur jaune
+                                } else {
+                                    star.classList.remove('text-yellow-400'); // Supprime la couleur jaune
+                                    star.classList.add('text-gray-300'); // Ajoute la couleur grise
+                                }
+                            });
+                        }
+                    </script>
 
+                </div>
+
+                <!-- Comment -->
+                <div>
+                    <label for="commentaire" class="block text-md font-medium text-gray-700 mb-1">
+                        Comment
+                    </label>
+                    <textarea
+                        id="commentaire"
+                        name="commentaire"
+                        rows="4"
+                        class="h-56 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                    type="submit"
+                    class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary/90 transition-colors"
+                >
+                    Submit Review
+                </button>
             </div>
-
-            <!-- Comment -->
-            <div>
-                <label for="commentaire" class="block text-sm font-medium text-gray-700 mb-1">
-                    Comment
-                </label>
-                <textarea
-                    id="commentaire"
-                    name="commentaire"
-                    rows="4"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary/50 focus:border-primary"
-                    required
-                ></textarea>
-            </div>
-
-            <!-- Submit Button -->
-            <button
-                type="submit"
-                class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary/90 transition-colors"
-            >
-                Submit Review
-            </button>
-        </div>
-    </form>
+        </form>
     </div>
 </x-app>
