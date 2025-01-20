@@ -21,7 +21,7 @@
                         <span class="block text-primary mt-2">Développeur junior en informatique</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8">
-                        Recherche de stage en développement d’application et/ou développement web
+                        Recherche de stage en développement d’application et/ou développement web backend.
                     </p>
                     <div>
                         <h2 class="text-2xl font-semibold text-black mb-4">À propos</h2>
@@ -238,7 +238,8 @@
                                 </div>
                                 <h3 class="text-xl font-semibold text-black">Sports</h3>
                             </div>
-                            <p class="text-gray-600">J'aime regarder et pratiquer les différents sports. J'ai notamment joué au football plus de douze ans et je fais de la musculation depuis 2 ans. </p>
+                            <p class="text-gray-600"> J'ai joué au football plus de douze ans et depuis 2 ans, je fais de la musculation. J'aime aussi regarder et pratiquer les différents sports. </p>
+                            <br>
                         </div>
                     </div>
                 </div>

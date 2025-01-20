@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Portfolio',
             description: 'J\'ai créé ce portfolio pour présenter mes projets et compétences. ' +
                 'Je l\'ai développé à l\'aide de Laravel et de Tailwind CSS. '+
-                'J\'ai utilisé Laravel afin de me perfectionner ' +
-                'et montrer mes compétences en PHP. J\'ai notamment créé un CRUD pour les avis et utilisé l\'authentification tout en gérant les droits liés aux utilisateurs.',
+                'J\'ai utilisé le framework Laravel afin de me perfectionner ' +
+                'et montrer mes compétences en PHP. J\'ai notamment créé un CRUD pour gérer les avis et j\'ai aussi utilisé l\'authentification pour gérer les droits liés aux utilisateurs.',
             images: [
                 portfolio1,
                 portfolio2,
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: 'Méditrip',
-            description: 'Ce projet Laravel a été réalisé lors du Marathon du Web, un événement où nous devions créer un site web complet en 48h et sans pause. ' +
+            description: 'Ce projet a été réalisé en PHP (Laravel) lors du Marathon du Web, un événement où nous devions créer un site web complet en 48h et sans pause. ' +
                 'Notre équipe informatique de trois étudiants était accompagnée de quatre étudiants de la filière MMI pour s\'occuper du design du site. '+
                 'Méditrip est un site qui répertorie les voyages en Méditerranée, effectués par les utilisateurs de l\'application. ' +
                 'Chaque utilisateur peut créer, modifier, supprimer un voyage en ajoutant, modifiant ou supprimant des étapes. Il peut aussi liker le voyage d\'un autre utilisateur.',
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'Nous avons reproduit ce jeu en Java avec JavaFX et Gradle en groupe de 4 étudiants. ' +
                 'Ce projet nous a permis de bien nous former sur les patrons de conception. ' +
                 'Bomberman est un jeu où les joueurs placent des bombes pour détruire des obstacles et éliminer des ennemis. '+
-                'Le but est de survivre tout en tuant les ennemis que nous avons programmés.'+
+                'Le but est de survivre tout en tuant les ennemis que nous avons programmés. '+
                 'Des bonus permettent d\'améliorer les capacités du joueur, '+
                 'comme le rendre invincible pendant un court laps de temps, récupérer une vie, ou '+
                 'encore obtenir une bombe supplémentaire.',
@@ -109,13 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: 'Le juste prix',
-            description: 'Nous avons reproduit le concept de l\'émission "Le Juste Prix" pour recréer le jeu sur un site web en Python Flask. '+
-                'Le but du jeu est donc de trouver le juste prix d\'un objet disponible sur amazon avec le moins de tentative possible. '+
-                'Il y a deux modes de difficulté, "facile" et "difficile", ainsi qu\'un mode "multijoueur" où le but est d\'être celui qui possède le '+
+            description: 'En groupe de trois étudiants, nous avons reproduit le concept de l\'émission "Le Juste Prix" pour recréer le jeu sur un site web en Python Flask. '+
+                'Le but du jeu est donc de trouver le prix d\'un objet disponible sur amazon avec le moins de tentative possible. '+
+                'Il y a deux modes de difficulté : "facile" et "difficile". Nous avons ajouté un mode "multijoueur" où le but est d\'être celui qui trouve le '+
                 'prix le plus proche de l\'article de base. Le site possède un classement qui répertorie les 5 meilleurs joueurs de chaque mode. Un utilisateur peut '+
                 'ajouter un article grâce au lien amazon de celui-ci. '+
                 'Nous obtenons les informations d\'un article à l\'aide d\'une API (ws.chez-wam.info)',
-
             images: [
                 justePrix1,
                 justePrix2,
