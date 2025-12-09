@@ -4,15 +4,12 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import NavBarLinks from '../types/types';
-
-// Import des composants Material UI
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 
 const NavBar: React.FC = () => {
-    // Permet de savoir sur quelle page on se trouve
     const pathname = usePathname();
 
     return (
@@ -39,8 +36,6 @@ const NavBar: React.FC = () => {
                     gap: 1
                 }}
             >
-
-                {/* LIENS */}
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     {NavBarLinks.map((link) => {
                         const IconComponent = link.icon;
@@ -51,20 +46,21 @@ const NavBar: React.FC = () => {
                                 key={link.name}
                                 component={Link}
                                 href={link.href}
-                                startIcon={<IconComponent style={{ fontSize: '1.1rem' }} />}
                                 sx={{
                                     backgroundColor: isActive ? 'var(--background)' : 'transparent',
                                     color: isActive ? 'var(--foreground)' : 'inherit',
-
                                     display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
                                     borderRadius: '25px',
-                                    padding: '4px 18px',
+                                    padding: { xs: '8px 12px', sm: '4px 18px' },
                                     textTransform: 'none',
                                     fontSize: '0.85rem',
                                     fontWeight: isActive ? 600 : 400,
                                     fontFamily: 'var(--font-geist-sans)',
                                     whiteSpace: 'nowrap',
                                     transition: 'all 0.3s ease',
+                                    minWidth: 'auto',
 
                                     '&:hover': {
                                         backgroundColor: isActive
@@ -73,7 +69,16 @@ const NavBar: React.FC = () => {
                                     }
                                 }}
                             >
-                                {link.name}
+                                <IconComponent
+                                    sx={{
+                                        fontSize: '1.2rem',
+                                        mr: { xs: 0, sm: 1 }
+                                    }}
+                                />
+
+                                <Box component="span" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                    {link.name}
+                                </Box>
                             </Button>
                         );
                     })}
