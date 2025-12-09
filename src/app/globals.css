@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --- PAGE : Noir clair / Gris foncé --- */
+  --background: #1E1E1E;
+  --foreground: #EDEDED; /* Texte blanc cassé pour ne pas agresser les yeux */
 
-  /* --- COULEURS DE LA NAVBAR (Editables ici) --- */
-  /* Tu peux mettre un code hex (#ffffff), rgb, ou une autre variable */
-  --navbar-bg: #f5f5f5;      /* Gris très clair par défaut */
-  --navbar-text: #171717;    /* Texte foncé */
+  /* --- NAVBAR : Noir très foncé --- */
+  --navbar-bg: #050505;
+  --navbar-text: #FFFFFF;
 }
 
 @theme inline {
@@ -16,19 +16,17 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Intégration dans Tailwind (optionnel, mais pratique) */
   --color-navbar: var(--navbar-bg);
   --color-navbar-text: var(--navbar-text);
 }
 
+/* On garde le support dark mode au cas où, mais avec les mêmes teintes */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-
-    /* --- COULEURS DE LA NAVBAR (Mode Sombre) --- */
-    --navbar-bg: #121212;    /* Presque noir pour se fondre */
-    --navbar-text: #ededed;  /* Texte clair */
+    --background: #1E1E1E;
+    --foreground: #EDEDED;
+    --navbar-bg: #050505;
+    --navbar-text: #FFFFFF;
   }
 }
 

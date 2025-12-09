@@ -2,65 +2,83 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import NavBarLinks from '../types/types';
 
 // Import des composants Material UI
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
 
 const NavBar: React.FC = () => {
+    // Permet de savoir sur quelle page on se trouve
+    const pathname = usePathname();
+
     return (
         <AppBar
-            position="static"
-            elevation={1}
-            // Utilisation des variables CSS natives définies dans globals.css
-            // On supprime la prop 'color="default"' pour laisser nos variables gérer la couleur
+            position="fixed"
+            elevation={3}
             sx={{
+                top: '1.5rem',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: 'fit-content',
+                maxWidth: '95vw',
+                borderRadius: '50px',
                 backgroundColor: 'var(--navbar-bg)',
-                color: 'var(--navbar-text)'
+                color: 'var(--navbar-text)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
             }}
         >
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    {/* LOGO ou NOM DU PORTFOLIO à gauche */}
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component={Link}
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.1rem',
-                            color: 'inherit', // Hérite de la couleur de l'AppBar (donc --navbar-text)
-                            textDecoration: 'none',
-                        }}
-                    >
-                        PORTFOLIO
-                    </Typography>
+            <Toolbar
+                sx={{
+                    px: '1rem !important',
+                    minHeight: '48px !important',
+                    gap: 1
+                }}
+            >
 
-                    {/* Zone de navigation (Les liens) */}
-                    <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end', gap: 2 }}>
-                        {NavBarLinks.map((link) => (
+                {/* LIENS */}
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                    {NavBarLinks.map((link) => {
+                        const IconComponent = link.icon;
+                        const isActive = pathname === link.href;
+
+                        return (
                             <Button
                                 key={link.name}
                                 component={Link}
                                 href={link.href}
-                                // On force l'héritage de couleur ici aussi
-                                sx={{ my: 2, color: 'inherit', display: 'block' }}
+                                startIcon={<IconComponent style={{ fontSize: '1.1rem' }} />}
+                                sx={{
+                                    backgroundColor: isActive ? 'var(--background)' : 'transparent',
+                                    color: isActive ? 'var(--foreground)' : 'inherit',
+
+                                    display: 'flex',
+                                    borderRadius: '25px',
+                                    padding: '4px 18px',
+                                    textTransform: 'none',
+                                    fontSize: '0.85rem',
+                                    fontWeight: isActive ? 600 : 400,
+                                    fontFamily: 'var(--font-geist-sans)',
+                                    whiteSpace: 'nowrap',
+                                    transition: 'all 0.3s ease',
+
+                                    '&:hover': {
+                                        backgroundColor: isActive
+                                            ? 'var(--background)'
+                                            : 'rgba(255, 255, 255, 0.1)',
+                                    }
+                                }}
                             >
                                 {link.name}
                             </Button>
-                        ))}
-                    </Box>
-                </Toolbar>
-            </Container>
+                        );
+                    })}
+                </Box>
+            </Toolbar>
         </AppBar>
     );
 };
