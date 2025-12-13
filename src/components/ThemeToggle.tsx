@@ -16,23 +16,23 @@ const ThemeToggle: React.FC = () => {
     }, []);
 
     if (!mounted) {
-        return null; // Évite le flash incorrect au chargement
+        return null;
     }
 
     return (
         <Box
             sx={{
+                display: { xs: 'none', sm: 'block' },
                 position: 'fixed',
-                top: '1.5rem', // Même hauteur que la NavBar
-                right: { xs: '1.5rem', md: '2rem' }, // Un peu plus de marge sur grands écrans
-                zIndex: 1200, // Au-dessus du reste
-
-                // Style cohérent avec la NavBar (Glassmorphism)
+                top: '1.6rem',
+                right: { xs: '1.5rem', md: '2rem' },
+                zIndex: 1200,
+                padding: '0.2rem',
                 backgroundColor: 'var(--navbar-bg)',
                 color: 'var(--navbar-text)',
                 backdropFilter: 'blur(10px)',
                 border: '1px solid rgba(255, 255, 255, 0.1)',
-                borderRadius: '50%', // Rond parfait pour un seul bouton
+                borderRadius: '50%',
                 boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
                 transition: 'all 0.3s ease',
             }}

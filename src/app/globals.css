@@ -6,6 +6,7 @@
   --color-navbar-bg: var(--navbar-bg);
   --color-navbar-text: var(--navbar-text);
   --color-navbar-border: var(--navbar-border);
+  --color-navbar-active-bg: var(--navbar-active-bg);
 
   /* 👇 AJOUTE CECI : On lie la classe 'font-sans' de Tailwind à ta variable Next.js */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
@@ -21,6 +22,10 @@
   --navbar-bg: rgba(255, 255, 255, 0.8);
   --navbar-text: #000000;
   --navbar-border: rgba(0, 0, 0, 0.1);
+  --navbar-active-bg: #E5E5E5;
+
+  /* Light well */
+  --light-orb: rgba(59, 130, 246, 0.8);
 }
 
 /* --- THÈME SOMBRE (Dark Mode) --- */
@@ -33,13 +38,34 @@
   --navbar-bg: rgba(5, 5, 5, 0.8);
   --navbar-text: #FFFFFF;
   --navbar-border: rgba(255, 255, 255, 0.1);
+  --navbar-active-bg: #27272A;
+
+  /* Light well */
+  --light-orb: rgba(59, 130, 246, 0.3);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-
-  /* Ajoute cette ligne si elle manque pour un effet fluide */
   transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+.ambient-light-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 700px;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: radial-gradient(
+    ellipse 100% 50% at 50% 0%,
+    var(--light-orb) 0%,
+    transparent 70%
+  );
+
+  filter: blur(100px);
+  opacity: 1;
 }

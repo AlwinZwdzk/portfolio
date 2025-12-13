@@ -1,16 +1,29 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {navBarLinks} from '../resources/content';
+import { navBarLinks } from '@/resources/content';
+import { useTheme } from 'next-themes';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
 
 const NavBar: React.FC = () => {
     const pathname = usePathname();
+
+    // Hooks pour gérer le thème
+    const { resolvedTheme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     return (
         <AppBar
@@ -47,25 +60,24 @@ const NavBar: React.FC = () => {
                                 component={Link}
                                 href={link.href}
                                 sx={{
-                                    backgroundColor: isActive ? 'var(--background)' : 'transparent',
+                                    backgroundColor: isActive ? 'var(--navbar-active-bg)' : 'transparent',
                                     color: isActive ? 'var(--foreground)' : 'inherit',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     borderRadius: '25px',
-                                    padding: { xs: '8px 12px', sm: '4px 18px' },
+                                    padding: { xs: '4px 12px', sm: '4px 18px' },
                                     textTransform: 'none',
                                     fontSize: '0.85rem',
                                     fontWeight: isActive ? 600 : 400,
                                     fontFamily: 'var(--font-geist-sans)',
                                     whiteSpace: 'nowrap',
                                     transition: 'all 0.3s ease',
-                                    //minWidth: 'auto',
 
                                     '&:hover': {
                                         backgroundColor: isActive
-                                            ? 'var(--background)'
-                                            : 'rgba(255, 255, 255, 0.1)',
+                                            ? 'var(--navbar-active-bg)'
+                                            : 'rgba(128, 128, 128, 0.1)',
                                     }
                                 }}
                             >
@@ -82,6 +94,39 @@ const NavBar: React.FC = () => {
                             </Button>
                         );
                     })}
+
+                    <Box sx={{ display: { xs: 'flex', sm: 'none' }, alignItems: 'center', ml: 0.5 }}>
+
+                        <Divider
+                            orientation="vertical"
+                            flexItem
+                            sx={{
+                                height: 24,
+                                alignSelf: 'center',
+                                borderColor: 'var(--navbar-text)',
+                                opacity: 0.3,
+                                mx: 0.5
+                            }}
+                        />
+
+                        <IconButton
+                            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+                            size="small"
+                            sx={{
+                                color: 'inherit',
+                                padding: '18px',
+                                '&:hover': { backgroundColor: 'rgba(128, 128, 128, 0.1)' }
+                            }}
+                            aria-label="Changer le thème"
+                        >
+                            {mounted && (resolvedTheme === 'dark' ? (
+                                <LightModeIcon sx={{ fontSize: '1.1rem' }} />
+                            ) : (
+                                <DarkModeIcon sx={{ fontSize: '1.1rem' }} />
+                            ))}
+                        </IconButton>
+                    </Box>
+
                 </Box>
             </Toolbar>
         </AppBar>

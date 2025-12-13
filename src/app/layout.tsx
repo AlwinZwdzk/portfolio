@@ -20,29 +20,30 @@ export const metadata: Metadata = {
   title: "Alwin Zawadzki | Portfolio",
   description: "Portfolio d'Alwin Zawadzki, Ingénieur Logiciel",
 };
-
 export default function RootLayout({
-                                     children,
+                                       children,
                                    }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-      <html lang="en" suppressHydrationWarning>
-      <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300`}
-      >
-      <Providers>
-        <NavBar />
+    return (
+        <html lang="en" suppressHydrationWarning>
+        <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300 relative`}
+        >
+        <Providers>
 
-        <ThemeToggle />
+            <div className="ambient-light-bg" aria-hidden="true" />
 
-        <main className="flex-grow z-10 relative">
-          {children}
-        </main>
+            <NavBar />
+            <ThemeToggle />
 
-        <Footer />
-      </Providers>
-      </body>
-      </html>
-  );
+            <main className="flex-grow z-10 relative">
+                {children}
+            </main>
+
+            <Footer />
+        </Providers>
+        </body>
+        </html>
+    );
 }
