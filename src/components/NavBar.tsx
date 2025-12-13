@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {person,navBarLinks} from '../resources/content';
+import {navBarLinks} from '../resources/content';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -71,7 +71,7 @@ const NavBar: React.FC = () => {
                             >
                                 <IconComponent
                                     sx={{
-                                        fontSize: '1.2rem',
+                                        fontSize: '1rem',
                                         mr: { xs: 0, sm: 1 }
                                     }}
                                 />

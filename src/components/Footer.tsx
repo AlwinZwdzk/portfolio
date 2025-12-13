@@ -14,10 +14,8 @@ const Footer: React.FC = () => {
                 width: '100%',
                 py: 4,
                 mt: 'auto',
-                borderTop: '1px solid',
                 borderColor: 'divider'
             }}
-            className="bg-white dark:bg-black border-zinc-200 dark:border-zinc-800"
         >
             <div className="max-w-3xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
 
