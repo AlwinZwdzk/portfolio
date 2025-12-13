@@ -1,8 +1,4 @@
 import React from 'react';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import WorkIcon from '@mui/icons-material/Work';
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
-import HomeIcon from '@mui/icons-material/Home';
 
 export interface NavItem {
     name: string;
@@ -10,11 +6,78 @@ export interface NavItem {
     icon: React.ElementType;
 }
 
-const NavBarLinks: NavItem[] = [
-    { name: "Home", href: "/", icon: HomeIcon },
-    { name: "About", href: "/about", icon: AccountCircleIcon },
-    { name: "Projects", href: "/projects", icon: LightbulbIcon },
-    { name: "Experiences", href: "/experiences", icon: WorkIcon },
-];
+export type Person = {
+    firstName: string;
+    lastName: string;
+    name: string;
+    email: string;
+    role: string;
+    languages?: string[];
+    avatar: string;
+    cv: string;
+};
 
-export default NavBarLinks;
+export type Social = Array<{
+    name: string;
+    icon: React.ElementType;
+    link: string;
+}>;
+
+export interface About{
+    intro: {
+        title: string;
+        description: React.ReactNode;
+    };
+
+    studies: {
+        title: string;
+        institutions: Array<{
+            name: string;
+            description: React.ReactNode;
+        }>;
+    };
+    technicalSkills: {
+        title: string;
+        types: Array<{
+            title: string;
+            skills: Array<{
+                name: string;
+                icon : string;
+            }>;
+        }>;
+    };
+}
+
+export interface Work {
+    title: string;
+    experiences: Array<{
+        company: string;
+        timeframe: string;
+        role: string;
+        achievements: React.ReactNode[];
+        images?: Array<{
+            src: string;
+            alt: string;
+            width: number;
+            height: number;
+        }>;
+    }>;
+}
+
+export interface Project {
+    title: string;
+    projects: Array<{
+        title: string;
+        description: React.ReactNode;
+        tags: Array<{
+            name: string;
+            icon?: string;
+        }>;
+        images: Array<{
+            src: string;
+            alt: string;
+            width: number;
+            height: number;
+        }>;
+    }>;
+}
