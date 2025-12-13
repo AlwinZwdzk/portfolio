@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import NavBarLinks from '../types/types';
+import {person,navBarLinks} from '../resources/content';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -37,7 +37,7 @@ const NavBar: React.FC = () => {
                 }}
             >
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                    {NavBarLinks.map((link) => {
+                    {navBarLinks.map((link) => {
                         const IconComponent = link.icon;
                         const isActive = pathname === link.href;
 
@@ -60,7 +60,7 @@ const NavBar: React.FC = () => {
                                     fontFamily: 'var(--font-geist-sans)',
                                     whiteSpace: 'nowrap',
                                     transition: 'all 0.3s ease',
-                                    minWidth: 'auto',
+                                    //minWidth: 'auto',
 
                                     '&:hover': {
                                         backgroundColor: isActive
