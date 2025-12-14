@@ -21,7 +21,7 @@ export const person : Person = {
     email: "alwin.zawadzki@gmail.com",
     role: "Software Engineer",
     languages: ["French", "English"],
-    avatar: "/images/avatar.jpg",
+    avatar: "/images/avatar.png",
     cv: "/documents/alwin_zawadzki_cv.pdf",
 };
 
@@ -49,9 +49,7 @@ export const about: About = {
         description: (
             <>
             My adventure in computer science started about seven years ago when I discovered Scratch in middle school.
-            I immediately knew I wanted to work in this field. I really enjoy combining mathematical logic with the practical side of building applications.
-            </>,
-            <>
+            I immediately knew I wanted to work in this field. I really enjoy combining mathematical logic with the practical side of building applications.<br/>
             Today, I am studying for a Bachelor of Technology in Computer Science at the University of Lens. My training focuses on software and web development,
             as well as Continuous Integration to ensure code quality. My goal is to use these skills for innovative projects and to keep learning every day.
             </>

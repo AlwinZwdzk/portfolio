@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -8,15 +10,14 @@
   --color-navbar-border: var(--navbar-border);
   --color-navbar-active-bg: var(--navbar-active-bg);
 
-  /* 👇 AJOUTE CECI : On lie la classe 'font-sans' de Tailwind à ta variable Next.js */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
 /* --- THÈME CLAIR (Light Mode) --- */
 :root {
-  --background: #FAFAFA; /* Un blanc cassé très léger, moins agressif que #FFFFFF */
-  --foreground: #171717; /* Noir presque pur pour le texte */
+  --background: #FAFAFA;
+  --foreground: #171717;
 
   /* Navbar Light */
   --navbar-bg: rgba(255, 255, 255, 0.8);
@@ -26,13 +27,17 @@
 
   /* Light well */
   --light-orb: rgba(59, 130, 246, 0.8);
+
+  /* Badges */
+  --badge-bg: #F4F4F5;
+  --badge-text: #52525B;
+  --border-color: #E4E4E7;
 }
 
 /* --- THÈME SOMBRE (Dark Mode) --- */
-/* L'attribut .dark est ajouté automatiquement par next-themes */
 .dark {
-  --background: #0a0a0a; /* Ta couleur demandée : Noir profond éco-friendly */
-  --foreground: #EDEDED; /* Blanc cassé pour le texte */
+  --background: #0a0a0a;
+  --foreground: #EDEDED;
 
   /* Navbar Dark */
   --navbar-bg: rgba(5, 5, 5, 0.8);
@@ -42,6 +47,11 @@
 
   /* Light well */
   --light-orb: rgba(59, 130, 246, 0.3);
+
+  /* Badges */
+  --badge-bg: #18181B;
+  --badge-text: #A1A1AA;
+  --border-color: #27272A;
 }
 
 body {
@@ -51,6 +61,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   position: relative;
 }
+
 .ambient-light-bg {
   position: absolute;
   top: 0;
@@ -61,9 +72,9 @@ body {
   pointer-events: none;
 
   background-image: radial-gradient(
-    ellipse 100% 50% at 50% 0%,
-    var(--light-orb) 0%,
-    transparent 70%
+          ellipse 100% 50% at 50% 0%,
+          var(--light-orb) 0%,
+          transparent 70%
   );
 
   filter: blur(100px);

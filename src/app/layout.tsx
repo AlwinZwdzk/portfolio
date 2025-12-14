@@ -4,7 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Providers } from "./providers";
-import ThemeToggle from "@/components/ThemeToggle"; // <--- Import du nouveau bouton
+import ThemeToggle from "@/components/ThemeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,13 +31,11 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300 relative`}
         >
         <Providers>
-
             <div className="ambient-light-bg" aria-hidden="true" />
-
             <NavBar />
             <ThemeToggle />
 
-            <main className="flex-grow z-10 relative">
+            <main className="flex-grow z-10 relative w-full max-w-3xl mx-auto px-6 pt-24 sm:pt-32">
                 {children}
             </main>
 
