@@ -24,7 +24,7 @@ const ThemeToggle: React.FC = () => {
             sx={{
                 display: { xs: 'none', sm: 'block' },
                 position: 'fixed',
-                top: '1.6rem',
+                top: '1.1rem',
                 right: { xs: '1.5rem', md: '2rem' },
                 zIndex: 1200,
                 padding: '0.2rem',
