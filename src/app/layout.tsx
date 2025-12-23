@@ -22,7 +22,7 @@ export default function RootLayout({
             <NavBar />
             <ThemeToggle />
 
-            <main className="flex-grow z-10 relative w-full max-w-3xl mx-auto px-6 pt-24 sm:pt-32">
+            <main className="flex-grow z-10 relative w-full max-w-3xl mx-auto px-6 pt-28 sm:pt-32">
                 {children}
             </main>
 
