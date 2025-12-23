@@ -55,7 +55,9 @@ export interface Work {
         company: string;
         timeframe: string;
         role: string;
-        achievements: React.ReactNode[];
+        description: string;
+        technologies: Skill[];
+        achievements: string[];
         images?: Array<{
             src: string;
             alt: string;
