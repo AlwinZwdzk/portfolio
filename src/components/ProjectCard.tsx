@@ -23,10 +23,14 @@ export default function ProjectCard({ title, subtitle, tags, images }: ProjectCa
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    const aspectRatio = images.length > 0
+        ? `${images[0].width} / ${images[0].height}`
+        : '16 / 9';
+
     const scroll = (direction: 'left' | 'right') => {
         if (scrollContainerRef.current) {
             const container = scrollContainerRef.current;
-            const scrollAmount = container.clientWidth; // On défile de la largeur d'une image
+            const scrollAmount = container.clientWidth;
 
             if (direction === 'left') {
                 container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
@@ -45,10 +49,13 @@ export default function ProjectCard({ title, subtitle, tags, images }: ProjectCa
     };
 
     return (
-        <div className="flex flex-col gap-5 w-full bg-zinc-50 dark:bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all hover:shadow-md">
+        <div className="flex flex-col gap-5 w-full bg-white dark:bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all hover:shadow-md">
 
             {/* --- CAROUSEL SECTION --- */}
-            <div className="relative group w-full aspect-video bg-zinc-200 dark:bg-zinc-950">
+            <div
+                className="relative group w-full bg-zinc-100 dark:bg-zinc-950"
+                style={{ aspectRatio: aspectRatio }}
+            >
                 <div
                     ref={scrollContainerRef}
                     onScroll={handleScroll}
@@ -100,8 +107,7 @@ export default function ProjectCard({ title, subtitle, tags, images }: ProjectCa
             </div>
 
             {/* --- DETAILS SECTION --- */}
-            <div className="flex flex-col gap-3 px-6 pb-6">
-
+            <div className="flex flex-col gap-3 px-6 pb-6 text-left">
                 <div>
                     <h3 className="text-2xl font-bold text-foreground">
                         {title}
@@ -130,14 +136,6 @@ export default function ProjectCard({ title, subtitle, tags, images }: ProjectCa
                         </span>
                     ))}
                 </div>
-
-                {/* (Optionnel) Bouton "En savoir plus" pour plus tard */}
-                {/* <div className="pt-2">
-                    <button className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline">
-                        View Details ->
-                    </button>
-                </div>
-                */}
             </div>
         </div>
     );
