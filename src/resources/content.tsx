@@ -21,7 +21,7 @@ export const person : Person = {
     email: "alwin.zawadzki@gmail.com",
     role: "Software Engineer",
     languages: ["French", "English"],
-    avatar: "/images/avatar.png",
+    avatar: "/images/avatar.webp",
     cv: "/documents/alwin_zawadzki_cv.pdf",
 };
 
