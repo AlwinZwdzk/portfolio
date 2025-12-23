@@ -6,7 +6,7 @@ import { person, about, social } from '@/resources/content';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TranslateIcon from '@mui/icons-material/Translate';
 import DownloadIcon from '@mui/icons-material/Download';
-import { Typography, Button, Divider } from '@mui/material';
+import { Divider } from '@mui/material';
 
 export default function About() {
     return (
@@ -24,16 +24,15 @@ export default function About() {
                 <div className="flex flex-col items-center md:items-start text-center md:text-left flex-grow space-y-5">
 
                     <div>
-                        <Typography variant="h3" component="h1" className="font-bold tracking-tight text-foreground text-4xl md:text-5xl">
+                        <h1 className="font-mediumbold tracking-tight text-foreground text-4xl md:text-5xl m-0">
                             {person.firstName} <span className="text-blue-600 dark:text-blue-400">{person.lastName}</span>
-                        </Typography>
-                        <Typography variant="h6" className="text-foreground/80 font-medium mt-1">
+                        </h1>
+                        <p className="text-foreground/80 font-medium mt-1 text-xl">
                             {person.role}
-                        </Typography>
+                        </p>
                     </div>
 
                     <div className="flex flex-col md:flex-row items-center gap-3 w-full md:w-auto">
-
                         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-badge border border-badge-border text-badge-text text-xs font-bold whitespace-nowrap shadow-sm transition-colors">
                             <LocationOnIcon style={{ fontSize: 14 }} />
                             Pas-de-Calais, France
@@ -50,34 +49,30 @@ export default function About() {
                     </div>
 
                     <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
-                        <Button
-                            component="a" href={person.cv} target="_blank" startIcon={<DownloadIcon style={{ fontSize: 18 }} />} variant="outlined"
-                            sx={{
-                                borderRadius: '50px', textTransform: 'none', padding: '6px 20px', fontWeight: 600,
-                                color: 'var(--foreground)',
-                                backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                                borderColor: 'rgba(59, 130, 246, 0.4)',
-                                transition: 'all 0.3s ease',
-                                '&:hover': { backgroundColor: 'rgba(59, 130, 246, 0.2)', borderColor: 'rgba(59, 130, 246, 0.8)', transform: 'translateY(-1px)' }
-                            }}
+                        {/* Remplacement du Button MUI par un lien <a> standard stylisé (0 JS) */}
+                        <a
+                            href={person.cv}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/40 bg-blue-500/10 text-foreground text-sm font-semibold hover:bg-blue-500/20 hover:border-blue-500/80 hover:-translate-y-px transition-all duration-300 "
                         >
+                            <DownloadIcon style={{ fontSize: 17 }} />
                             Resume
-                        </Button>
+                        </a>
 
                         {social.map((item) => {
                             const Icon = item.icon;
                             return (
-                                <Button
-                                    key={item.name} component="a" href={item.link} target="_blank" startIcon={<Icon fontSize="small" />} variant="outlined"
-                                    sx={{
-                                        borderRadius: '50px', textTransform: 'none', padding: '6px 16px',
-                                        color: 'var(--foreground)',
-                                        borderColor: 'var(--navbar-border)',
-                                        '&:hover': { borderColor: 'var(--foreground)', backgroundColor: 'rgba(128,128,128, 0.05)' }
-                                    }}
+                                <a
+                                    key={item.name}
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--navbar-border)] text-foreground text-sm font-semibold hover:border-foreground hover:bg-gray-500/5 transition-all duration-300"
                                 >
+                                    <Icon fontSize="small" />
                                     {item.name}
-                                </Button>
+                                </a>
                             );
                         })}
                     </div>
@@ -87,10 +82,10 @@ export default function About() {
             <Divider className="opacity-50" />
 
             <section className="flex flex-col gap-4">
-                <Typography variant="h5" className="font-bold text-foreground">
+                <h2 className="text-2xl font-medium text-foreground m-0">
                     {about.intro.title}
-                </Typography>
-                <div className="text-lg leading-relaxed text-foreground/90 text-justify">
+                </h2>
+                <div className="text-lg leading-relaxed text-foreground/90 text-justify font-normal">
                     {about.intro.description}
                 </div>
             </section>

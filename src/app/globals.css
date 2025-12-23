@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@variant dark (&:where(.dark, .dark *));
-
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -10,11 +8,11 @@
   --color-navbar-border: var(--navbar-border);
   --color-navbar-active-bg: var(--navbar-active-bg);
 
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 }
 
-/* --- THÈME CLAIR (Light Mode) --- */
+/* --- Light Mode --- */
 :root {
   --background: #FAFAFA;
   --foreground: #171717;
@@ -27,14 +25,9 @@
 
   /* Light well */
   --light-orb: rgba(59, 130, 246, 0.8);
-
-  /* Badges */
-  --badge-bg: #F4F4F5;
-  --badge-text: #52525B;
-  --border-color: #E4E4E7;
 }
 
-/* --- THÈME SOMBRE (Dark Mode) --- */
+/* --- Dark Mode --- */
 .dark {
   --background: #0a0a0a;
   --foreground: #EDEDED;
@@ -47,21 +40,15 @@
 
   /* Light well */
   --light-orb: rgba(59, 130, 246, 0.3);
-
-  /* Badges */
-  --badge-bg: #18181B;
-  --badge-text: #A1A1AA;
-  --border-color: #27272A;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   position: relative;
 }
-
 .ambient-light-bg {
   position: absolute;
   top: 0;
