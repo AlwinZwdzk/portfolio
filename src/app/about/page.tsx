@@ -6,17 +6,20 @@ import { person, about, social } from '@/resources/content';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TranslateIcon from '@mui/icons-material/Translate';
 import DownloadIcon from '@mui/icons-material/Download';
-import { Divider } from '@mui/material';
+import SchoolIcon from '@mui/icons-material/School';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import TerminalIcon from '@mui/icons-material/Terminal';
 
 export default function About() {
     return (
         <div className="flex flex-col gap-12 w-full pb-20">
 
+            {/* --- HEADER SECTION --- */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
 
                 <div className="relative group shrink-0">
                     <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
-                    <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-badge-border shadow-sm">
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-[var(--navbar-border)] shadow-lg">
                         <Image src={person.avatar} alt={person.name} fill className="object-cover" priority />
                     </div>
                 </div>
@@ -79,16 +82,91 @@ export default function About() {
                 </div>
             </div>
 
-            <Divider className="opacity-50" />
+            <hr className="border-t border-zinc-200 dark:border-zinc-800 my-2 opacity-70" />
 
+            {/* --- INTRODUCTION SECTION --- */}
             <section className="flex flex-col gap-4">
-                <h2 className="text-2xl font-medium text-foreground m-0">
+                <h2 className="text-2xl font-semibold text-foreground m-0 flex items-center gap-3">
+                    <AutoStoriesIcon className="text-blue-600 dark:text-blue-400" />
                     {about.intro.title}
                 </h2>
                 <div className="text-lg leading-relaxed text-foreground/90 text-justify font-normal">
                     {about.intro.description}
                 </div>
             </section>
+
+            <hr className="border-t border-zinc-200 dark:border-zinc-800 my-2 opacity-70" />
+
+            {/* --- TECHNICAL SKILLS SECTION --- */}
+            <section className="flex flex-col gap-6">
+                <h2 className="text-2xl font-bold text-foreground m-0 flex items-center gap-3">
+                    <TerminalIcon className="!text-blue-600 dark:!text-blue-400" />
+                    {about.technicalSkills.title}
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {about.technicalSkills.types.map((type, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col gap-3 p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/50"
+                        >
+                            <h3 className="text-lg font-bold text-foreground/90">
+                                {type.title}
+                            </h3>
+
+                            <div className="flex flex-wrap gap-2">
+                                {type.skills.map((skill, skillIndex) => (
+                                    <span
+                                        key={skillIndex}
+                                        className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-foreground/80 shadow-sm transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+                                    >
+                                        <svg
+                                            role="img"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="w-4 h-4 fill-current"
+                                        >
+                                            <title>{skill.name}</title>
+                                            <path d={skill.icon} />
+                                        </svg>
+
+                                        {skill.name}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <hr className="border-t border-zinc-200 dark:border-zinc-800 my-2 opacity-70" />
+
+            {/* --- STUDIES SECTION --- */}
+            <section className="flex flex-col gap-6">
+                <h2 className="text-2xl font-semibold text-foreground m-0 flex items-center gap-3">
+                    <SchoolIcon className="text-blue-600 dark:text-blue-400" />
+                    {about.studies.title}
+                </h2>
+
+                <div className="flex flex-col gap-0 pl-2">
+                    {about.studies.institutions.map((item, index) => (
+                        <div key={index} className="relative border-l-2 border-zinc-200 dark:border-zinc-800 pl-8 pb-10 last:pb-0">
+                            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-background border-2 border-blue-500 shadow-[0_0_0_4px_var(--background)] z-10" />
+
+                            <div className="flex flex-col gap-2">
+                                <h3 className="text-xl font-medium text-foreground leading-none">
+                                    {item.name}
+                                </h3>
+
+                                <div className="text-base font-normal text-foreground/80 text-justify leading-relaxed mt-1">
+                                    {item.description}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
         </div>
     );
 }
