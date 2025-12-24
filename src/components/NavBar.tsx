@@ -33,7 +33,7 @@ const NavBar: React.FC = () => {
                     top: 0,
                     left: 0,
                     right: 0,
-                    height: '6.5rem',
+                    height: '8rem',
                     zIndex: 100,
                     pointerEvents: 'none',
                     backgroundColor: 'transparent',

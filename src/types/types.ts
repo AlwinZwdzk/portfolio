@@ -1,5 +1,10 @@
 import React from 'react';
 
+export interface Skill {
+    name: string;
+    icon: string;
+}
+
 export interface NavItem {
     name: string;
     href: string;
@@ -23,12 +28,11 @@ export type Social = Array<{
     link: string;
 }>;
 
-export interface About{
+export interface About {
     intro: {
         title: string;
         description: React.ReactNode;
     };
-
     studies: {
         title: string;
         institutions: Array<{
@@ -40,10 +44,7 @@ export interface About{
         title: string;
         types: Array<{
             title: string;
-            skills: Array<{
-                name: string;
-                icon : string;
-            }>;
+            skills: Skill[];
         }>;
     };
 }
@@ -54,7 +55,9 @@ export interface Work {
         company: string;
         timeframe: string;
         role: string;
-        achievements: React.ReactNode[];
+        description: string;
+        technologies: Skill[];
+        achievements: string[];
         images?: Array<{
             src: string;
             alt: string;
@@ -68,11 +71,9 @@ export interface Project {
     title: string;
     projects: Array<{
         title: string;
-        description: React.ReactNode;
-        tags: Array<{
-            name: string;
-            icon?: string;
-        }>;
+        subtitle: string;
+        description?: React.ReactNode;
+        tags: Skill[];
         images: Array<{
             src: string;
             alt: string;
