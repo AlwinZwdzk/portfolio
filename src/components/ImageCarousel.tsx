@@ -76,7 +76,7 @@ export default function ImageCarousel({ images, altTextFallback = "Project", rou
                             priority={index === 0}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                             draggable={false}
-                        />f
+                        />
                     </div>
                 ))}
             </div>
