@@ -1,7 +1,6 @@
 import React from 'react';
 import { projects } from '@/resources/content';
-import ProjectCard from '@/components/ProjectCard'; // Import du composant
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import ProjectCard from '@/components/ProjectCard';
 
 export default function Projects() {
     return (

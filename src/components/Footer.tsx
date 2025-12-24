@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
 import { person, social } from '@/resources/content';

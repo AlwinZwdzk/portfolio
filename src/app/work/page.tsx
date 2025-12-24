@@ -1,7 +1,6 @@
 import React from 'react';
 import { work } from '@/resources/content';
 import WorkCard from '@/components/WorkCard';
-import WorkIcon from '@mui/icons-material/Work';
 
 export default function WorkPage() {
     return (

@@ -16,7 +16,7 @@ interface ProjectCardProps {
     }>;
 }
 
-export default function ProjectCard({ title, subtitle, tags, images }: ProjectCardProps) {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, subtitle, tags, images })=> {
     return (
         <div className="flex flex-col gap-5 w-full bg-white dark:bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all hover:shadow-md">
 
@@ -61,3 +61,5 @@ export default function ProjectCard({ title, subtitle, tags, images }: ProjectCa
         </div>
     );
 }
+
+export default ProjectCard;

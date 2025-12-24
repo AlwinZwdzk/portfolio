@@ -18,7 +18,7 @@ interface ImageCarouselProps {
     rounded?: boolean;
 }
 
-export default function ImageCarousel({ images, altTextFallback = "Project", rounded = true }: ImageCarouselProps) {
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, altTextFallback = "Project", rounded = true }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -113,3 +113,5 @@ export default function ImageCarousel({ images, altTextFallback = "Project", rou
         </div>
     );
 }
+
+export default ImageCarousel;

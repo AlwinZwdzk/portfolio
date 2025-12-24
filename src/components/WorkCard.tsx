@@ -20,7 +20,7 @@ interface WorkCardProps {
     };
 }
 
-export default function WorkCard({ company, role, timeframe, technologies, image }: WorkCardProps) {
+const WorkCard : React.FC<WorkCardProps> = ({ company, role, timeframe, technologies, image }) => {
 
     const slug = company.toLowerCase()
         .replace(/[^\w\s-]/g, '')
@@ -104,3 +104,5 @@ export default function WorkCard({ company, role, timeframe, technologies, image
         </div>
     );
 }
+
+export default WorkCard;

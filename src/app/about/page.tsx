@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { person, about, social } from '@/resources/content';
@@ -18,8 +16,8 @@ export default function About() {
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
 
                 <div className="relative group shrink-0">
-                    <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
-                    <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-[var(--navbar-border)] shadow-lg">
+                    <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition duration-500" />
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border border-[var(--navbar-border)] shadow-lg bg-zinc-100 dark:bg-zinc-900">
                         <Image src={person.avatar} alt={person.name} fill className="object-cover" priority />
                     </div>
                 </div>
