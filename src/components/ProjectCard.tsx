@@ -1,10 +1,7 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
-import Image from 'next/image';
 import { Skill } from '@/types/types';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ImageCarousel from "@/components/ImageCarousel";
 
 interface ProjectCardProps {
     title: string;
@@ -20,91 +17,15 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ title, subtitle, tags, images }: ProjectCardProps) {
-    const scrollContainerRef = useRef<HTMLDivElement>(null);
-    const [currentSlide, setCurrentSlide] = useState(0);
-
-    const aspectRatio = images.length > 0
-        ? `${images[0].width} / ${images[0].height}`
-        : '16 / 9';
-
-    const scroll = (direction: 'left' | 'right') => {
-        if (scrollContainerRef.current) {
-            const container = scrollContainerRef.current;
-            const scrollAmount = container.clientWidth;
-
-            if (direction === 'left') {
-                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            } else {
-                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            }
-        }
-    };
-
-    const handleScroll = () => {
-        if (scrollContainerRef.current) {
-            const container = scrollContainerRef.current;
-            const slideIndex = Math.round(container.scrollLeft / container.clientWidth);
-            setCurrentSlide(slideIndex);
-        }
-    };
-
     return (
         <div className="flex flex-col gap-5 w-full bg-white dark:bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all hover:shadow-md">
 
             {/* --- CAROUSEL SECTION --- */}
-            <div
-                className="relative group w-full bg-zinc-100 dark:bg-zinc-950"
-                style={{ aspectRatio: aspectRatio }}
-            >
-                <div
-                    ref={scrollContainerRef}
-                    onScroll={handleScroll}
-                    className="flex w-full h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
-                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                >
-                    {images.map((img, index) => (
-                        <div key={index} className="flex-shrink-0 w-full h-full snap-center relative">
-                            <Image
-                                src={img.src}
-                                alt={img.alt}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            />
-                        </div>
-                    ))}
-                </div>
-
-                {images.length > 1 && (
-                    <>
-                        <button
-                            onClick={() => scroll('left')}
-                            className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70 z-10"
-                            aria-label="Image précédente"
-                        >
-                            <ArrowBackIosNewIcon fontSize="small" />
-                        </button>
-                        <button
-                            onClick={() => scroll('right')}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70 z-10"
-                            aria-label="Image suivante"
-                        >
-                            <ArrowForwardIosIcon fontSize="small" />
-                        </button>
-
-                        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 px-2 py-1 rounded-full bg-black/30 backdrop-blur-sm">
-                            {images.map((_, index) => (
-                                <div
-                                    key={index}
-                                    className={`w-1.5 h-1.5 rounded-full transition-colors ${
-                                        index === currentSlide ? 'bg-white' : 'bg-white/40'
-                                    }`}
-                                />
-                            ))}
-                        </div>
-                    </>
-                )}
-            </div>
+            <ImageCarousel
+                images={images}
+                altTextFallback={title}
+                rounded={false}
+            />
 
             {/* --- DETAILS SECTION --- */}
             <div className="flex flex-col gap-3 px-6 pb-6 text-left">
