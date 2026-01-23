@@ -3,10 +3,6 @@ import { social } from '@/resources/content';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import WorkIcon from '@mui/icons-material/Work';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import BoltIcon from '@mui/icons-material/Bolt';
-import CompostIcon from '@mui/icons-material/Compost';
-import SpeedIcon from '@mui/icons-material/Speed';
-import EcoFeature from "@/components/EcoFeature";
 import NavCard from "@/components/NavCard";
 
 export default function Home() {
