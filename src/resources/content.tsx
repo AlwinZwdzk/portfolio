@@ -193,6 +193,112 @@ export const projects: Project = {
     title: "Projects",
     projects: [
         {
+            title: "FeurNews",
+            subtitle: "Social media platform about news",
+            description: (
+                <>
+
+                </>
+            ),
+            tags: [
+                skills.java,
+                skills.typescript,
+                skills.react
+            ],
+            images: [
+                {
+                    src: "/images/projects/feurnews1.webp",
+                    alt: "FeurNews Welcome Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews2.webp",
+                    alt: "FeurNews Registration Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews3.webp",
+                    alt: "FeurNews Posts Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews4.webp",
+                    alt: "FeurNews Post Detail Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews5.webp",
+                    alt: "FeurNews Profile Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews6.webp",
+                    alt: "FeurNews Conversation Detail Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews7.webp",
+                    alt: "FeurNews Conversations Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews8.webp",
+                    alt: "FeurNews Communities Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews9.webp",
+                    alt: "FeurNews Community Detail Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews10.webp",
+                    alt: "FeurNews Search Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews-lightmode.webp",
+                    alt: "FeurNews Homepage Light Mode",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews-responsive1.webp",
+                    alt: "FeurNews Mobile Posts Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews-responsive2.webp",
+                    alt: "FeurNews Mobile Search Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews-responsive3.webp",
+                    alt: "FeurNews Mobile Communities Page",
+                    width: 1920,
+                    height: 1080
+                },
+                {
+                    src: "/images/projects/feurnews-responsive4.webp",
+                    alt: "FeurNews Mobile Conversations Page",
+                    width: 1920,
+                    height: 1080
+                }
+            ]
+        },
+        {
             title: "Voiture de Crous",
             subtitle: "Car rental platform",
             description: (
