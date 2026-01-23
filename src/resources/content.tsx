@@ -98,12 +98,12 @@ export const about: About = {
         title: "Introduction",
         description: (
             <>
-            My adventure in computer science started about seven years ago when I discovered Scratch in middle school.
-            I immediately knew I wanted to work in this field. I really enjoy combining mathematical logic with the practical side of building applications.<br/>
-            Today, I am studying for a Bachelor of Technology in Computer Science at the University of Lens. My training focuses on software and web development,
-            as well as Continuous Integration to ensure code quality. My goal is to use these skills for innovative projects and to keep learning every day.
+                My journey in Computer Science began seven years ago, driven by a fascination for algorithmic logic.
+                I have always loved bridging the gap between abstract mathematical concepts and the concrete engineering required to build robust applications.
+                Beyond coding, I am motivated by problem-solving and innovation.
+                Currently in my final year, I am eager to bring this mindset to a professional team during a 3-month internship in Thailand starting March 16th.
             </>
-        ),
+        )
     },
     studies: {
         title: "Studies",
@@ -111,21 +111,40 @@ export const about: About = {
             {
                 name: "Lens Institute of Technology",
                 description: (
-                    <>I am currently in my final year of a Bachelor of Technology in Computer Science.
-                    I have learned to build software and web applications (front-end and back-end), and I also have some experience with mobile development.
-                    My technical skills include setting up tests and Continuous Integration to ensure quality, as well as managing databases.
-                    I am used to working with Agile methods and tools like Git and GitLab to manage projects efficiently. Additionally,
-                    I have basic knowledge of Artificial Intelligence, including machine learning and the use of AI agents.
+                    <>
+                        <p className="text-base md:text-[1.05rem] leading-relaxed text-foreground/80">
+                            I am currently completing my Bachelor of Technology in Computer Science at the Lens Institute of Technology.
+                            My curriculum covers the entire software development lifecycle:
+                        </p>
+
+                        <ul className="mt-4 space-y-2 pl-5 list-disc marker:text-blue-600/80 dark:marker:text-blue-400/80 ">
+                            <li className="pl-3 text-foreground/80 leading-relaxed">
+                                <span className="font-semibold text-foreground/90">Application Development:</span>{" "}
+                                specialized in building scalable web and software solutions (Front-end \& Back-end), with additional training in mobile development.
+                            </li>
+                            <li className="pl-3 text-foreground/80 leading-relaxed">
+                                <span className="font-semibold text-foreground/90">Quality \& DevOps:</span>{" "}
+                                Strong emphasis on code reliability through automated testing and Continuous Integration (CI) pipelines.
+                            </li>
+                            <li className="pl-3 text-foreground/80 leading-relaxed">
+                                <span className="font-semibold text-foreground/90">Methodology:</span>{" "}
+                                Practical experience with Agile\/Scrum workflows and version control tools like Git and GitLab to ensure efficient team collaboration.
+                            </li>
+                            <li className="pl-3 text-foreground/80 leading-relaxed">
+                                <span className="font-semibold text-foreground/90">Emerging Tech:</span>{" "}
+                                Fundamental understanding of Artificial Intelligence, including Machine Learning concepts and the integration of AI agents.
+                            </li>
+                        </ul>
                     </>
                 ),
             },
             {
                 name: "School of Computer and Industrial Engineering - IG2I Centrale Lille",
-                description: <>After the first year, I transferred to a program with a stronger focus on IT.</>,
+                description: <>Completed the first year of the engineering curriculum. I then transferred to my current program to dedicate myself fully to Software Development and IT.</>,
             },
             {
                 name: "Anatole France High School - Lillers",
-                description: <>Graduated for  with honors, specializing in Mathematics and Computer Science.</>,
+                description: <>Graduated with honors, specializing in Mathematics and Computer Science.</>,
             },
         ],
     },
@@ -311,7 +330,7 @@ export const projects: Project = {
         },
         {
             title: "Laravel Portfolio",
-            subtitle: "Personal Skills Showcase",
+            subtitle: "First Personal Portfolio Website",
             description: (
                 <>
                     Designed to showcase my skills and projects, this portfolio was built using <strong>Laravel</strong> and <strong>Tailwind CSS</strong>.
@@ -432,15 +451,17 @@ export const work: Work = {
             company: "Eiffage Énergie Systèmes - Infra Nord",
             timeframe: "April 2025 - July 2025",
             role: "Full Stack Developer Intern",
-            description: "Eiffage Énergie Systèmes is a European leader in electrical and energetic engineering. During this 3-month internship, I contributed to 'Espace Pilotage', an in-house CMMS (Computerized Maintenance Management System) used to manage technical infrastructures and maintenance contracts, such as urban video protection systems and construction site security.",
-            technologies: [skills.php, skills.javascript, skills.jQuery, skills.mySql,  skills.bootstrap],
+            description: "Eiffage Énergie Systèmes is a European leader in electrical engineering and construction. " +
+                "I joined the IT department to contribute to 'Espace Pilotage', a critical in-house CMMS (Computerized Maintenance Management System). " +
+                "This web platform is used daily to manage maintenance contracts and monitor technical infrastructures, such as urban video-protection networks.",
+            technologies: [skills.php, skills.javascript, skills.mySql, skills.jQuery,  skills.bootstrap],
             achievements: [
-                "Adapted to a 5-year-old application built with native PHP and JavaScript, quickly learning how to maintain and improve custom code without using modern frameworks.",
-                "Optimized defective equipment tracking (RMA) by implementing smart filters, allowing teams to find specific repair records instantly.",
-                "Redesigned the application to be fully mobile-responsive, enabling technicians to access critical technical data on their smartphones while on-site.",
-                "Developed a customizable logging dashboard for administrators, allowing them to choose the level of detail recorded (from critical errors to detailed background activity).",
-                "Streamlined the debugging process by implementing log pagination and high-visibility styling, making it significantly faster for the team to identify and fix software bugs.",
-                "Created a seamless navigation system to jump directly from a reported breakdown to its corresponding repair file with a single click."
+                "Legacy Code Adaptation: Successfully integrated into a 5-year-old codebase built with Native PHP and JavaScript. Rapidly mastered the architecture to implement new features without relying on modern frameworks.",
+                "Mobile-First Redesign: Revamped key modules to be fully responsive, allowing field technicians to access critical data and update tickets directly from their smartphones.",
+                "RMA Workflow Optimization: Engineered a dynamic filtering system for Return Merchandise Agreements (RMA), enabling teams to track defective equipment and repair status instantly.",
+                "Advanced Logging System: Developed a custom logging architecture with a dashboard for administrators, featuring granular control over log levels (Info, Error, Debug) to monitor application health.",
+                "Performance & Debugging: Implemented server-side pagination and syntax highlighting for logs, significantly reducing the time required for the development team to diagnose and fix bugs.",
+                "UX/UI Improvements: Created seamless navigation bridges between maintenance tickets and equipment files, streamlining the user workflow."
             ],
             images: [
                 {

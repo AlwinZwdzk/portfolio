@@ -27,8 +27,7 @@ export default function Home() {
                 </div>
 
                 <p className="max-w-2xl text-lg md:text-2xl text-zinc-600 dark:text-zinc-300 leading-relaxed font-light">
-                    Welcome to my digital space. <br className="hidden md:block" />
-                    Feel free to explore my universe or contact me directly.
+                    Final-year student seeking a 3-month internship in Thailand starting March 16th. Feel free to explore my projects or contact me directly.
                 </p>
 
                 {/* Socials - Prominent Buttons */}
@@ -49,6 +48,8 @@ export default function Home() {
                         );
                     })}
                 </div>
+
+
             </section>
 
             <hr className="border-t border-zinc-200 p-0 dark:border-zinc-800 opacity-70" />
@@ -60,7 +61,7 @@ export default function Home() {
                         href="/about"
                         title="About Me"
                         subtitle="The Developer"
-                        description="Who I am, my passions, and my technical skills."
+                        description="My background, personality, and technical expertise."
                         icon={<AccountCircleIcon className="text-emerald-500 !text-4xl" />}
                         delay="delay-200"
                     />
@@ -68,7 +69,7 @@ export default function Home() {
                         href="/projects"
                         title="Projects"
                         subtitle="Web & Software"
-                        description="Discover my technical achievements and personal projects."
+                        description="Explore my web applications, software solutions, and coding challenges."
                         icon={<LightbulbIcon className="text-amber-500 !text-4xl" />}
                         delay="delay-0"
                     />
@@ -76,47 +77,10 @@ export default function Home() {
                         href="/work"
                         title="Experience"
                         subtitle="Career Path"
-                        description="My professional journey, internships, and corporate experience."
+                        description="My professional track record, internships, and industry experience."
                         icon={<WorkIcon className="text-blue-500 !text-4xl" />}
                         delay="delay-100"
                     />
-                </div>
-            </section>
-
-            <hr className="border-t border-zinc-200 dark:border-zinc-800 my-2 opacity-70" />
-
-            {/* --- ACT 3 : THE ECO-MANIFESTO --- */}
-            <section className="w-full pb-16 md:pb-24">
-                <div className="max-w-4xl mx-auto px-6 text-center flex flex-col gap-10">
-
-                    <div className="flex flex-col gap-4">
-                        <h3 className="text-3xl md:text-4xl font-bold text-foreground">
-                            Designed for Performance
-                        </h3>
-                        <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-                            This portfolio is not just a showcase; it is a technical demonstration.
-                            It is designed to be ultra-fast, accessible, and environmentally friendly.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                        <EcoFeature
-                            icon={<CompostIcon fontSize="large" />}
-                            title="Eco-Friendly"
-                            text="Lightweight static site aiming for an EcoIndex A+ score to reduce carbon footprint."
-                        />
-                        <EcoFeature
-                            icon={<SpeedIcon fontSize="large" />}
-                            title="High Performance"
-                            text="Optimized for instant loading and a perfect Lighthouse score."
-                        />
-                        <EcoFeature
-                            icon={<BoltIcon fontSize="large" />}
-                            title="Modern Tech"
-                            text="Powered by Next.js 15, Tailwind CSS, and React for maximum fluidity."
-                        />
-                    </div>
                 </div>
             </section>
 

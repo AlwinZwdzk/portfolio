@@ -1,11 +1,11 @@
 import React from 'react';
 
-export interface Skill {
+export type Skill = {
     name: string;
     icon: string;
 }
 
-export interface NavItem {
+export type NavItem = {
     name: string;
     href: string;
     icon: React.ElementType;
@@ -28,7 +28,7 @@ export type Social = Array<{
     link: string;
 }>;
 
-export interface About {
+export type About = {
     intro: {
         title: string;
         description: React.ReactNode;
@@ -49,7 +49,7 @@ export interface About {
     };
 }
 
-export interface Work {
+export type Work = {
     title: string;
     experiences: Array<{
         company: string;
@@ -67,7 +67,7 @@ export interface Work {
     }>;
 }
 
-export interface Project {
+export type Project = {
     title: string;
     projects: Array<{
         title: string;
