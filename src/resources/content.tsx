@@ -550,6 +550,7 @@ export const projects: Project = {
     ]
 };
 
+
 export const work: Work = {
     title: "Professional Experience",
     experiences: [
@@ -563,10 +564,10 @@ export const work: Work = {
             technologies: [skills.php, skills.javascript, skills.mySql, skills.jQuery,  skills.bootstrap],
             achievements: [
                 "Legacy Code Adaptation: Successfully integrated into a 5-year-old codebase built with Native PHP and JavaScript. Rapidly mastered the architecture to implement new features without relying on modern frameworks.",
-                "Mobile-First Redesign: Revamped key modules to be fully responsive, allowing field technicians to access critical data and update tickets directly from their smartphones.",
-                "RMA Workflow Optimization: Engineered a dynamic filtering system for Return Merchandise Agreements (RMA), enabling teams to track defective equipment and repair status instantly.",
                 "Advanced Logging System: Developed a custom logging architecture with a dashboard for administrators, featuring granular control over log levels (Info, Error, Debug) to monitor application health.",
                 "Performance & Debugging: Implemented server-side pagination and syntax highlighting for logs, significantly reducing the time required for the development team to diagnose and fix bugs.",
+                "RMA Workflow Optimization: Engineered a dynamic filtering system for Return Merchandise Agreements (RMA), enabling teams to track defective equipment and repair status instantly.",
+                "Mobile-First Redesign: Revamped key modules to be fully responsive, allowing field technicians to access critical data and update tickets directly from their smartphones.",
                 "UX/UI Improvements: Created seamless navigation bridges between maintenance tickets and equipment files, streamlining the user workflow."
             ],
             images: [
@@ -577,26 +578,26 @@ export const work: Work = {
                     height: 1080
                 },
                 {
-                    src: "/images/work/logs-before.webp",
-                    alt: "Old Logging Interface Espace Pilotage",
+                    src: "/images/work/logs.gif",
+                    alt: "Logs Page in Espace Pilotage",
                     width: 1730,
                     height: 1080
                 },
                 {
-                    src: "/images/work/logs-after1.webp",
-                    alt: "New Logging Interface Espace Pilotage",
+                    src: "/images/work/rma-filters.gif",
+                    alt: "Adding RMA Filters in Espace Pilotage",
                     width: 1730,
                     height: 1080
                 },
                 {
-                    src: "/images/work/logs-after2.webp",
-                    alt: "New Logging Interface Espace Pilotage with Filters",
+                    src: "/images/work/rma-mobile.gif",
+                    alt: "RMA Mobile Interface in Espace Pilotage",
                     width: 1730,
                     height: 1080
                 },
                 {
-                    src: "/images/work/rmas.webp",
-                    alt: "RMA Interface Espace Pilotage",
+                    src: "/images/work/rma-details.gif",
+                    alt: "RMA Detail in Espace Pilotage",
                     width: 1730,
                     height: 1080
                 }
