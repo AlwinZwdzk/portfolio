@@ -4,9 +4,9 @@ import { notFound } from 'next/navigation';
 import { work } from '@/resources/content';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import VerifiedIcon from '@mui/icons-material/Verified';
 import ImageCarousel from '@/components/ImageCarousel';
 import SkillCard from "@/components/SkillCard";
+import AchievementCard from "@/components/AchievementCard";
 
 const getSlug = (name: string) =>
     name.normalize('NFD')
@@ -43,19 +43,20 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
                 </Link>
             </div>
 
-            {/* --- CARROUSEL SIMPLE ET PROPRE --- */}
+            {/* --- CARROUSEL --- */}
             <ImageCarousel
                 images={experience.images || []}
                 altTextFallback={experience.company}
                 rounded={true}
             />
 
-            {/* --- HEADER INFO --- */}
+            {/* --- HEADER --- */}
             <div className="flex flex-col gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-8">
                 <h1 className="text-3xl md:text-5xl font-bold text-foreground">
                     {experience.company}
                 </h1>
 
+                {/* Role & Timeframe */}
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-zinc-600 dark:text-zinc-400 font-medium text-lg">
                     <span className="text-blue-600 dark:text-blue-400 font-bold">{experience.role}</span>
                     <span className="hidden sm:inline w-1.5 h-1.5 rounded-full bg-zinc-300 dark:bg-zinc-600" />
@@ -65,6 +66,7 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
                     </span>
                 </div>
 
+                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-2">
                     {experience.technologies.map((tech) => (
                         <SkillCard key={tech.name} name={tech.name} svgPath={tech.icon} size="large" />
@@ -72,7 +74,7 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
                 </div>
             </div>
 
-            {/* --- DESCRIPTION & ACHIEVEMENTS --- */}
+            {/* --- DESCRIPTION --- */}
             <div className="flex flex-col gap-10">
                 <section className="flex flex-col gap-4">
                     <h2 className="text-2xl font-bold text-foreground">About the role</h2>
@@ -85,15 +87,8 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
                     <section className="flex flex-col gap-4">
                         <h2 className="text-2xl font-bold text-foreground">Key Achievements</h2>
                         <ul className="grid gap-4">
-                            {experience.achievements.map((item, idx) => (
-                                <li key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800/50">
-                                    <div className="mt-1 p-1 bg-green-100 dark:bg-green-900/30 rounded-full text-green-600 dark:text-green-400 shrink-0">
-                                        <VerifiedIcon fontSize="small" />
-                                    </div>
-                                    <span className="text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                                        {item}
-                                    </span>
-                                </li>
+                            {experience.achievements.map((achievement, index) => (
+                                <AchievementCard achievement={achievement} key={index} />
                             ))}
                         </ul>
                     </section>
