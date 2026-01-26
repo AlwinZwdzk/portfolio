@@ -13,7 +13,7 @@ const ViewMore: React.FC<ViewMoreProps> = ({ link }) => {
                 href={link}
                 className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 hover:gap-3 transition-all"
             >
-                Read More
+                View More
                 <ArrowForwardIcon style={{ fontSize: 16 }} />
             </Link>
         </div>

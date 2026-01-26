@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { person, about, social } from '@/resources/content';
+import {person, about, social, projects} from '@/resources/content';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TranslateIcon from '@mui/icons-material/Translate';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -11,7 +11,7 @@ import SkillCard from "@/components/SkillCard";
 
 export default function About() {
     return (
-        <div className="flex flex-col gap-12 w-full sm:pt-10">
+        <div className="flex flex-col gap-12 w-full">
 
             {/* --- HEADER SECTION --- */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
