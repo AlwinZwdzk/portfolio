@@ -4,7 +4,7 @@ import WorkCard from '@/components/WorkCard';
 
 export default function WorkPage() {
     return (
-        <div className="flex flex-col gap-10 w-full pb-10">
+        <div className="flex flex-col gap-10 w-full">
 
             {/* Page Header */}
             <div className="flex flex-col items-center text-center gap-4">

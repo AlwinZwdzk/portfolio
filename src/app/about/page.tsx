@@ -11,7 +11,7 @@ import SkillCard from "@/components/SkillCard";
 
 export default function About() {
     return (
-        <div className="flex flex-col gap-12 w-full pt-1 pb-10">
+        <div className="flex flex-col gap-12 w-full sm:pt-10">
 
             {/* --- HEADER SECTION --- */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">

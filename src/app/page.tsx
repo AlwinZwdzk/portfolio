@@ -7,7 +7,7 @@ import NavCard from "@/components/NavCard";
 
 export default function Home() {
     return (
-        <div className="flex flex-col w-full pt-5 pb-10 gap-16 md:gap-24">
+        <div className="flex flex-col w-full md:h-full pt-5 gap-16 md:gap-24 md:pb-18">
 
             {/* --- ACT 1 : WELCOME & SOCIALS --- */}
             <section className="flex flex-col items-center justify-center text-center gap-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
@@ -51,7 +51,7 @@ export default function Home() {
             <hr className="border-t border-zinc-200 p-0 dark:border-zinc-800 opacity-70" />
 
             {/* --- ACT 2 : NAVIGATION --- */}
-            <section className="w-full sm:px-0 px-4">
+            <section className="w-full sm:px-0 px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
                     <NavCard
                         href="/about"
