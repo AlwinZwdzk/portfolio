@@ -2,11 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Skill } from '@/types/types';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import SkillCard from "@/components/SkillCard";
+import ViewMore from "@/components/ViewMore";
 
 interface WorkCardProps {
     company: string;
@@ -39,7 +38,7 @@ const WorkCard : React.FC<WorkCardProps> = ({ company, role, timeframe, technolo
             {/* --- 1. IMAGE SECTION --- */}
             <div
                 className="relative w-full overflow-hidden bg-zinc-100 dark:bg-zinc-950 border-b border-zinc-100 dark:border-zinc-800"
-                style={{ aspectRatio: aspectRatio }}
+                style={{ aspectRatio }}
             >
                 {image ? (
                     <Image
@@ -80,15 +79,7 @@ const WorkCard : React.FC<WorkCardProps> = ({ company, role, timeframe, technolo
                 </div>
 
                 {/* --- 3. VIEW MORE SECTION --- */}
-                <div className="pt-2 mt-2 border-t border-zinc-100 dark:border-zinc-800/50">
-                    <Link
-                        href={`/work/${slug}`}
-                        className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 hover:gap-3 transition-all"
-                    >
-                        Read More
-                        <ArrowForwardIcon style={{ fontSize: 16 }} />
-                    </Link>
-                </div>
+                <ViewMore link={`/work/${slug}`} />
 
             </div>
         </div>
