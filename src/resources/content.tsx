@@ -476,7 +476,7 @@ export const projects: Project = {
                 skills.javascript,
                 skills.laravel,
                 skills.tailwind,
-                skills.mySQL,
+                skills.mySql,
             ],
             images: [
                 {
