@@ -30,7 +30,7 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
     }
 
     return (
-        <div className="flex flex-col gap-8 w-full pb-20 animate-in fade-in duration-500 max-w-4xl mx-auto">
+        <div className="flex flex-col gap-8 w-full pb-10 animate-in fade-in duration-500 max-w-4xl mx-auto">
 
             {/* --- BOUTON RETOUR --- */}
             <div>

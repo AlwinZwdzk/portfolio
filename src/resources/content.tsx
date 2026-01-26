@@ -117,7 +117,7 @@ export const about: About = {
                 description: (
                     <>
                         <p className="text-base md:text-[1.05rem] leading-relaxed text-foreground/80">
-                            I am currently completing my Bachelor of Technology in Computer Science at the Lens Institute of Technology.
+                            I am currently completing my <strong> Bachelor of Technology in Computer Science </strong> at the Lens Institute of Technology.
                             My curriculum covers the entire software development lifecycle:
                         </p>
 
