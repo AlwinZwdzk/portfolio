@@ -4,7 +4,7 @@ import ProjectCard from '@/components/ProjectCard';
 
 export default function Projects() {
     return (
-        <div className="flex flex-col gap-10 w-full pb-20">
+        <div className="flex flex-col gap-10 w-full">
 
             {/* Page Header */}
             <div className="flex flex-col items-center text-center gap-4">
@@ -23,7 +23,7 @@ export default function Projects() {
                         key={index}
                         title={project.title}
                         subtitle={project.subtitle}
-                        tags={project.tags}
+                        technologies={project.technologies}
                         images={project.images}
                         description={project.description}
                     />

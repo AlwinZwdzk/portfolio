@@ -1,16 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import { person, about, social } from '@/resources/content';
+import {person, about, social, projects} from '@/resources/content';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TranslateIcon from '@mui/icons-material/Translate';
 import DownloadIcon from '@mui/icons-material/Download';
 import SchoolIcon from '@mui/icons-material/School';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import TerminalIcon from '@mui/icons-material/Terminal';
+import SkillCard from "@/components/SkillCard";
 
 export default function About() {
     return (
-        <div className="flex flex-col gap-12 w-full pb-20">
+        <div className="flex flex-col gap-12 w-full">
 
             {/* --- HEADER SECTION --- */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
@@ -113,23 +114,8 @@ export default function About() {
                             </h3>
 
                             <div className="flex flex-wrap gap-2">
-                                {type.skills.map((skill, skillIndex) => (
-                                    <span
-                                        key={skillIndex}
-                                        className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-foreground/80 shadow-sm transition-colors hover:text-blue-600 dark:hover:text-blue-400"
-                                    >
-                                        <svg
-                                            role="img"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="w-4 h-4 fill-current"
-                                        >
-                                            <title>{skill.name}</title>
-                                            <path d={skill.icon} />
-                                        </svg>
-
-                                        {skill.name}
-                                    </span>
+                                {type.skills.map((skill) => (
+                                    <SkillCard key={skill.name} name={skill.name} svgPath={skill.icon}/>
                                 ))}
                             </div>
                         </div>
@@ -155,6 +141,10 @@ export default function About() {
                                 <h3 className="text-xl font-medium text-foreground leading-none">
                                     {item.name}
                                 </h3>
+
+                                <div className="text-sm font-medium text-foreground/70">
+                                    {item.timeframe}
+                                </div>
 
                                 <div className="text-base font-normal text-foreground/80 text-justify leading-relaxed mt-1">
                                     {item.description}
