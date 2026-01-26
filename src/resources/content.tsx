@@ -64,6 +64,7 @@ const icons = {
     angular : "M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z" ,
     bootstrap : "M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" ,
     tailwind : "M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z",
+    gradle: "M22.695 4.297a3.807 3.807 0 0 0-5.29-.09.368.368 0 0 0 0 .533l.46.47a.363.363 0 0 0 .474.032 2.182 2.182 0 0 1 2.86 3.291c-3.023 3.02-7.056-5.447-16.211-1.083a1.24 1.24 0 0 0-.534 1.745l1.571 2.713a1.238 1.238 0 0 0 1.681.461l.037-.02-.029.02.688-.384a16.083 16.083 0 0 0 2.193-1.635.384.384 0 0 1 .499-.016.357.357 0 0 1 .016.534 16.435 16.435 0 0 1-2.316 1.741H8.77l-.696.39a1.958 1.958 0 0 1-.963.25 1.987 1.987 0 0 1-1.726-.989L3.9 9.696C1.06 11.72-.686 15.603.26 20.522a.363.363 0 0 0 .354.296h1.675a.363.363 0 0 0 .37-.331 2.478 2.478 0 0 1 4.915 0 .36.36 0 0 0 .357.317h1.638a.363.363 0 0 0 .357-.317 2.478 2.478 0 0 1 4.914 0 .363.363 0 0 0 .358.317h1.627a.363.363 0 0 0 .363-.357c.037-2.294.656-4.93 2.42-6.25 6.108-4.57 4.502-8.486 3.088-9.9zm-6.229 6.901l-1.165-.584a.73.73 0 1 1 1.165.587z",
     git : "M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" ,
     docker : "M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z" ,
     jetBrains : "M2.345 23.997A2.347 2.347 0 0 1 0 21.652V10.988C0 9.665.535 8.37 1.473 7.433l5.965-5.961A5.01 5.01 0 0 1 10.989 0h10.666A2.347 2.347 0 0 1 24 2.345v10.664a5.056 5.056 0 0 1-1.473 3.554l-5.965 5.965A5.017 5.017 0 0 1 13.007 24v-.003H2.345Zm8.969-6.854H5.486v1.371h5.828v-1.371ZM3.963 6.514h13.523v13.519l4.257-4.257a3.936 3.936 0 0 0 1.146-2.767V2.345c0-.678-.552-1.234-1.234-1.234H10.989a3.897 3.897 0 0 0-2.767 1.145L3.963 6.514Zm-.192.192L2.256 8.22a3.944 3.944 0 0 0-1.145 2.768v10.664c0 .678.552 1.234 1.234 1.234h10.666a3.9 3.9 0 0 0 2.767-1.146l1.512-1.511H3.771V6.706Z",
@@ -91,6 +92,7 @@ const skills: Record<string, Skill> = {
     angular : { name: "Angular", icon: icons.angular },
     bootstrap : { name: "Bootstrap", icon: icons.bootstrap },
     tailwind : { name: "Tailwind CSS", icon: icons.tailwind },
+    gradle : { name: "Gradle", icon: icons.gradle },
     git : { name: "Git", icon: icons.git },
     docker : { name: "Docker", icon: icons.docker },
     jetBrains : { name: "JetBrains", icon: icons.jetBrains },
@@ -201,11 +203,13 @@ export const projects: Project = {
         {
             title: "FeurNews",
             subtitle: "Social media platform about news",
-            description: (
-                <>
-
-                </>
-            ),
+            description:"FeurNews is a social network designed for citizen journalism, allowing users to broadcast, discuss, and rate news in real-time. The project simulated a professional environment by splitting the workforce into two teams: my team handled the Frontend (React), while another team built the Backend (Spring/MongoDB).",
+            achievements : [
+                "Feature Implementation: Developed a complete ecosystem including User Authentication, CRUD operations for posts, a 5-star rating/comment system, and social features (Direct Messaging, Follow/Block workflows).",
+                "Cross-Team Collaboration: Built the client-side application based on a REST API provided by an external backend team. Required strict adherence to their technical documentation and constant communication to ensure seamless data integration.",
+                "Intensive Agile Scrum: Operated under a rigorous framework supervised by professional coaches, consisting of daily sprints over a 2-week period. Managed the full Scrum lifecycle: Product Backlogs, Burn-up Charts, and 'Keep/Drop/Start' retrospectives.",
+                "Adaptability: Acted on daily feedback from the backend team (who served as Product Owners), rapidly iterating on the UI/UX to meet evolving requirements.",
+            ],
             technologies: [
                 skills.java,
                 skills.typescript,
@@ -309,11 +313,16 @@ export const projects: Project = {
         {
             title: "Voiture de Crous",
             subtitle: "Car rental platform",
-            description: (
-                <>
-
-                </>
-            ),
+            description: `
+                This project was a challenge in efficiency: building a fully functional car rental platform in just one week. 
+                Working in a team of 4 (split between Frontend and Backend), we developed a robust system handling the entire rental lifecycle, from vehicle selection to final invoicing.
+                `,
+            achievements: [
+                "Rapid Application Development: Successfully delivered a production-ready MVP (Minimum Viable Product) in an extremely short timeframe, requiring precise time management and intense coordination between the Angular (Front) and Laravel (Back) teams.",
+                "Complex Business Logic: Implemented a hierarchical management system where Agencies oversee specific Agents and vehicle fleets. The system handles real-time availability checks to prevent booking conflicts.",
+                "User-Centric Booking Flow: Designed a granular reservation process allowing users to fully customize their rental (vehicle options, specific insurance packages) before checkout.",
+                "Automation Integration: Developed a post-booking workflow that automatically generates a PDF invoice and dispatches it via email to the customer, ensuring a complete professional service loop."
+            ],
             technologies: [
                 skills.php,
                 skills.typescript,
@@ -403,13 +412,20 @@ export const projects: Project = {
         },
         {
             title: "Méditrip",
-            subtitle: "Travel Itinerary Social Platform",
-            description: (
-                <>
-                    Developed during the "Marathon du Web", an intense 48-hour non-stop hackathon. Our team of three CS students collaborated with four designers to deliver a polished product.
-                    <strong>Méditrip</strong> is a platform for sharing Mediterranean travel itineraries. Users can create detailed journeys with customizable steps, manage their trips, and interact with the community through a "like" system.
-                </>
-            ),
+            subtitle: "48h Hackathon • Design & Dev Collaboration",
+            description: `
+                Méditrip was born during the 'Marathon du Web', an intensive event challenging us to build a fully functional website from scratch in just 48 hours without breaks. 
+                The goal was to create a social platform for logging and sharing Mediterranean travel experiences.
+                `,
+            achievements: [
+                "Cross-Disciplinary Collaboration: Led the technical implementation within a mixed team of 3 Developers and 4 Multimedia Designers (MMI). " +
+                "A key success factor was bridging the gap between design concepts (HTML/CSS provided by designers) and the logical constraints of the Laravel framework.",
+                "Endurance & Delivery: Delivered a stable product under extreme time pressure and sleep deprivation. This experience sharpened my ability to prioritize essential features (MVP) to meet a non-negotiable deadline.",
+                "Built a robust backend supporting complex relationships",
+                "Dynamic CRUD: Users can create trips with multiple customizable steps (add/edit/delete)",
+                "Social Interactions: Implemented a 'Like' system and user profiles to save favorite trips.",
+                "Authentication: Secure user management and session handling using Laravel's native tools."
+                ],
             technologies: [
                 skills.laravel,
                 skills.php,
@@ -445,14 +461,19 @@ export const projects: Project = {
         {
             title: "Laravel Portfolio",
             subtitle: "First Personal Portfolio Website",
-            description: (
-                <>
-                    Designed to showcase my skills and projects, this portfolio was built using <strong>Laravel</strong> and <strong>Tailwind CSS</strong>.
-                    At the time, focusing on PHP, I utilized the Laravel framework to deepen my backend expertise.
-                    Key features include a review management system (CRUD) and secure user authentication for role-based access control.
-                </>
-            ),
+            description: `
+                Before my current portfolio, I developed this custom platform to serve as a practical demonstration of my Laravel skills. 
+                Rather than using a static template, I engineered a full-stack application to showcase my ability to build secure and interactive web systems from the ground up.
+                `,
+            achievements: [
+                "Backend Mastery: Leveraged the Laravel framework to structure a clean, maintainable MVC architecture, proving strong competencies in PHP object-oriented programming.",
+                "Secure Authentication: Implemented a robust permission system (ACL) to manage user rights. This ensures that only authorized administrators can moderate or delete reviews, while standard users have restricted access.",
+                "CRUD Implementation: Developed a complete Create, Read, Update, Delete cycle for the 'Reviews' section, allowing visitors to leave feedback and administrators to manage content dynamically.",
+                "Modern Styling: Integrated Tailwind CSS to build a responsive and custom user interface, moving away from standard Bootstrap templates."
+            ],
             technologies: [
+                skills.php,
+                skills.javascript,
                 skills.laravel,
                 skills.tailwind,
                 skills.mySQL,
@@ -481,13 +502,17 @@ export const projects: Project = {
         {
             title: "Bomberman",
             subtitle: "Classic Arcade Game Remake",
-            description: (
-                <>
-                    A faithful recreation of the classic arcade game, developed within a team of four.
-                    This project focused heavily on software architecture and Design Patterns. Players navigate a grid, placing bombs to clear obstacles and defeat AI-controlled enemies.
-                    The game features various power-ups (invincibility, extra lives, bomb capacity) to enhance gameplay mechanics.
-                </>
-            ),
+            description: `
+                    Developed in a team of 4, this project was a deep dive into Software Engineering concepts. 
+                    We reconstructed the gameplay of Bomberman to practice applying strict Object-Oriented Programming (OOP) principles. 
+                    The goal was to engineer a scalable codebase where game entities (players, enemies, bombs) interact seamlessly.
+                    `,
+            achievements: [
+                "Design Patterns Implementation: Applied various architectural patterns (such as Factory for entity creation, Singleton for the game engine, or Strategy for enemy movements) to decouple the game logic from the user interface.",
+                "AI & Game Logic: Programmed autonomous enemy behaviors (AI) and grid-based collision algorithms. The system handles real-time interactions between dynamic objects (explosions, destructible walls) and characters.",
+                "Extensible Power-up System: Designed a polymorphic bonus system allowing players to upgrade capabilities (Invincibility, Extra Life, Bomb Capacity). This modular structure makes it easy to add new types of bonuses without breaking existing code.",
+                "Build Automation: Integrated Gradle for dependency management and automated builds, facilitating smooth collaboration and version control within the team."
+            ],
             technologies: [
                 skills.java,
                 skills.gradle,
@@ -516,14 +541,15 @@ export const projects: Project = {
         {
             title: "Le Juste Prix",
             subtitle: "Competitive Pricing Game",
-            description: (
-                <>
-                    A web-based adaptation of the TV show "The Price is Right", built with <strong>Python Flask</strong>.
-                    The objective is to guess the exact price of Amazon products in the fewest attempts.
-                    Features include Single Player modes (Easy/Hard), a Multiplayer mode for competitive guessing, and a global leaderboard.
-                    Users can add new items via Amazon links, with product data fetched automatically through an external API.
-                </>
-            ),
+            description: `
+                Built by a team of 3, this project transforms the concept of the TV show 'The Price is Right' into a functional web application. 
+                We utilized Python Flask to create a dynamic gaming experience where users must guess the real market price of Amazon products in the fewest attempts possible.
+            `,
+            achievements: [
+              "External API Integration: Implemented a system allowing users to add new game items simply by pasting an Amazon link. The application connects to an external API to automatically scrape and store the product's title, image, and price.",
+              "Game Logic & Modes: Programmed distinct difficulty algorithms ('Easy' vs. 'Hard') and a Multiplayer Mode where the engine calculates and compares the price difference between players to determine the winner.",
+              "Competitive Ecosystem: Designed a global ranking system that tracks and displays the top 5 players for each game mode, adding a competitive layer to the user experience."
+            ],
             technologies: [
                 skills.python,
                 skills.flask,

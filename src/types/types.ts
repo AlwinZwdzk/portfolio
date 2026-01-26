@@ -73,7 +73,8 @@ export type Project = {
     projects: Array<{
         title: string;
         subtitle: string;
-        description?: React.ReactNode;
+        description?: string;
+        achievements?: string[];
         technologies: Skill[];
         images: Array<{
             src: string;
