@@ -37,6 +37,7 @@ export type About = {
         title: string;
         institutions: Array<{
             name: string;
+            timeframe: string;
             description: React.ReactNode;
         }>;
     };
@@ -73,7 +74,7 @@ export type Project = {
         title: string;
         subtitle: string;
         description?: React.ReactNode;
-        tags: Skill[];
+        technologies: Skill[];
         images: Array<{
             src: string;
             alt: string;

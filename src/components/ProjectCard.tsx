@@ -2,12 +2,13 @@
 
 import { Skill } from '@/types/types';
 import ImageCarousel from "@/components/ImageCarousel";
+import SkillCard from "@/components/SkillCard";
 
 interface ProjectCardProps {
     title: string;
     subtitle: string;
     description?: React.ReactNode;
-    tags: Skill[];
+    technologies: Skill[];
     images: Array<{
         src: string;
         alt: string;
@@ -16,7 +17,7 @@ interface ProjectCardProps {
     }>;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, subtitle, tags, images })=> {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, subtitle, technologies, images })=> {
     return (
         <div className="flex flex-col gap-5 w-full bg-white dark:bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all hover:shadow-md">
 
@@ -38,23 +39,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, subtitle, tags, images
                     </p>
                 </div>
 
-                {/* Tags / Technos */}
+                {/* Technos */}
                 <div className="flex flex-wrap gap-2 mt-1">
-                    {tags.map((tag, index) => (
-                        <span
-                            key={index}
-                            className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700"
-                        >
-                            <svg
-                                role="img"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-3.5 h-3.5 fill-current"
-                            >
-                                <path d={tag.icon} />
-                            </svg>
-                            {tag.name}
-                        </span>
+                    {technologies.map((tech) => (
+                        <SkillCard name={tech.name} svgPath={tech.icon} key={tech.name} size="large" />
                     ))}
                 </div>
             </div>

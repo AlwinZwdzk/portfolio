@@ -23,7 +23,7 @@ export default function Projects() {
                         key={index}
                         title={project.title}
                         subtitle={project.subtitle}
-                        tags={project.tags}
+                        technologies={project.technologies}
                         images={project.images}
                         description={project.description}
                     />

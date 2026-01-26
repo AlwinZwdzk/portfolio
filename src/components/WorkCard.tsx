@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Skill } from '@/types/types';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import SkillCard from "@/components/SkillCard";
 
 interface WorkCardProps {
     company: string;
@@ -22,7 +23,9 @@ interface WorkCardProps {
 
 const WorkCard : React.FC<WorkCardProps> = ({ company, role, timeframe, technologies, image }) => {
 
-    const slug = company.toLowerCase()
+    const slug = company.normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
         .replace(/[^\w\s-]/g, '')
         .replace(/\s+/g, '-');
 
@@ -71,21 +74,8 @@ const WorkCard : React.FC<WorkCardProps> = ({ company, role, timeframe, technolo
                 </div>
 
                 <div className="flex flex-wrap gap-2 mt-auto">
-                    {technologies.map((tech, index) => (
-                        <span
-                            key={index}
-                            className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700"
-                        >
-                            <svg
-                                role="img"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-3.5 h-3.5 fill-current"
-                            >
-                                <path d={tech.icon} />
-                            </svg>
-                            {tech.name}
-                        </span>
+                    {technologies.map((tech) => (
+                        <SkillCard key={tech.name} name={tech.name} svgPath={tech.icon} size="small" />
                     ))}
                 </div>
 
