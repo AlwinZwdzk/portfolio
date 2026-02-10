@@ -23,7 +23,7 @@ export default function Home() {
                 </div>
 
                 <p className="max-w-2xl text-lg md:text-2xl text-zinc-600 dark:text-zinc-300 leading-relaxed font-light">
-                    Final-year student seeking a 3-month internship in Thailand starting March 16th. Feel free to explore my projects or contact me directly.
+                    Final-year student seeking a 3-month internship from March 16th. Feel free to explore my projects or contact me directly.
                 </p>
 
                 {/* Socials - Prominent Buttons */}
