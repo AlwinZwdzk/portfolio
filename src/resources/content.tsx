@@ -126,15 +126,15 @@ export const about: About = {
                         <ul className="mt-4 space-y-2 pl-5 list-disc marker:text-blue-600/80 dark:marker:text-blue-400/80 ">
                             <li className="pl-3 text-foreground/80 leading-relaxed">
                                 <span className="font-semibold text-foreground/90">Application Development:</span>{" "}
-                                specialized in building scalable web and software solutions (Front-end \& Back-end), with additional training in mobile development.
+                                specialized in building scalable web and software solutions (Front-end & Back-end), with additional training in mobile development.
                             </li>
                             <li className="pl-3 text-foreground/80 leading-relaxed">
-                                <span className="font-semibold text-foreground/90">Quality \& DevOps:</span>{" "}
+                                <span className="font-semibold text-foreground/90">Quality & DevOps:</span>{" "}
                                 Strong emphasis on code reliability through automated testing and Continuous Integration (CI) pipelines.
                             </li>
                             <li className="pl-3 text-foreground/80 leading-relaxed">
                                 <span className="font-semibold text-foreground/90">Methodology:</span>{" "}
-                                Practical experience with Agile\/Scrum workflows and version control tools like Git and GitLab to ensure efficient team collaboration.
+                                Practical experience with Agile/Scrum workflows and version control tools like Git and GitLab to ensure efficient team collaboration.
                             </li>
                             <li className="pl-3 text-foreground/80 leading-relaxed">
                                 <span className="font-semibold text-foreground/90">Emerging Tech:</span>{" "}
