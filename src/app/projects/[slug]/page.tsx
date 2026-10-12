@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { projects } from '@/resources/content';
@@ -19,6 +20,51 @@ export async function generateStaticParams() {
     return projects.projects.map((project) => ({
         slug: getSlug(project.title),
     }));
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const { slug } = await params;
+    const project = projects.projects.find((p) => getSlug(p.title) === slug);
+
+    if (!project) {
+        return {
+            title: "Project Not Found",
+        };
+    }
+
+    const firstImage = project.images?.[0]?.src;
+    const description = project.subtitle || project.description?.slice(0, 160) || `Project ${project.title} by Alwin Zawadzki`;
+
+    return {
+        title: project.title,
+        description,
+        alternates: {
+            canonical: `/projects/${slug}`,
+        },
+        openGraph: {
+            title: `${project.title} | Alwin Zawadzki`,
+            description,
+            url: `/projects/${slug}`,
+            images: firstImage
+                ? [
+                      {
+                          url: firstImage,
+                          alt: project.title,
+                      },
+                  ]
+                : undefined,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${project.title} | Alwin Zawadzki`,
+            description,
+            images: firstImage ? [firstImage] : undefined,
+        },
+    };
 }
 
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {

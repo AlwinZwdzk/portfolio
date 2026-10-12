@@ -23,7 +23,7 @@ export default function Home() {
                 </div>
 
                 <p className="max-w-2xl text-lg md:text-2xl text-zinc-600 dark:text-zinc-300 leading-relaxed font-light">
-                    Final-year student seeking a 3-month internship. Available from March 16th. Feel free to explore my projects or contact me directly.
+                    Computer Science Bachelor graduate seeking an international internship (Erasmus +) to contribute to software engineering projects and expand my technical expertise. Feel free to explore my projects or contact me directly.
                 </p>
 
                 {/* Socials - Prominent Buttons */}

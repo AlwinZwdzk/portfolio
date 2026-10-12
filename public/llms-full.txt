@@ -1,0 +1,138 @@
+# Alwin Zawadzki — Complete Dossier & Resume
+
+> Full-stack Developer and Software Engineer graduated with a Bachelor of Technology in Computer Science (BUT Informatique) from Lens Institute of Technology, France. Actively seeking an international software engineering internship supported by the Erasmus+ scholarship program.
+
+---
+
+## 1. Contact & Social Links
+- **Full Name:** Alwin Zawadzki
+- **Role:** Full-stack Developer / Software Engineer
+- **Email:** alwin.zawadzki@gmail.com
+- **Website:** https://alwin-zawadzki.fr
+- **GitHub:** https://github.com/AlwinZwdzk
+- **LinkedIn:** https://www.linkedin.com/in/alwin-zawadzki/
+- **Curriculum Vitae:** https://alwin-zawadzki.fr/documents/alwin_zawadzki_cv.pdf
+- **Location:** Hauts-de-France, France (Open to worldwide relocation / Erasmus+ countries)
+
+---
+
+## 2. Professional Summary
+Computer Science Bachelor graduate specializing in Application Development (Front-end & Back-end). Experienced in engineering full-stack web applications, designing RESTful architectures, adapting legacy systems, and collaborating in intensive Agile/Scrum teams. Passionate about clean code, software engineering design patterns, and DevOps practices. Currently seeking an international software engineering internship under the Erasmus+ program.
+
+---
+
+## 3. Education & Credentials
+
+### Bachelor of Technology in Computer Science (BUT Informatique)
+- **Institution:** Lens Institute of Technology (IUT de Lens - Université d'Artois)
+- **Timeframe:** 2023 - 2026
+- **Specialization:** Application Development (Software & Scalable Web Solutions)
+- **Curriculum & Competencies:**
+  - Full-stack web and software engineering (Front-end & Back-end).
+  - Mobile application development fundamentals.
+  - Quality & DevOps: automated testing, CI/CD pipelines, code reliability.
+  - Agile/Scrum methodology, sprint planning, product backlog management, Git/GitLab workflows.
+  - Relational & NoSQL database management and modeling (PostgreSQL, MySQL, MongoDB, Neo4j).
+
+### Engineering Foundation Year
+- **Institution:** Polytech Lille
+- **Timeframe:** 2022 - 2023
+- **Focus:** Preparatory cycle in applied science and engineering before transferring to Computer Science.
+
+### High School Diploma (Baccalauréat Général)
+- **Institution:** Lycée Anatole France, Lillers
+- **Timeframe:** 2019 - 2022
+- **Honors:** Graduated with honors, specialized in Mathematics and Computer Science (NSI).
+
+---
+
+## 4. Technical Skills Matrix
+
+### Programming Languages
+- TypeScript & JavaScript (Modern ES6+, Node.js ecosystem)
+- Java (OOP, Design Patterns, Spring)
+- PHP (Modern OOP, MVC, Laravel)
+- Python (Flask, Django, Scripting)
+- C (Systems programming, memory management)
+- SQL (PostgreSQL, MySQL) & NoSQL (MongoDB, Neo4j)
+- Bash / Shell scripting
+
+### Frameworks & Libraries
+- **Frontend:** React, Next.js, Angular, Tailwind CSS, Bootstrap, jQuery
+- **Backend:** Laravel, Spring Boot, Flask, Django, Express/Node.js
+
+### Tools & DevOps
+- Git, GitHub, GitLab CI/CD
+- Docker & Containerization
+- Gradle & Maven build automation
+- JetBrains IDEs (IntelliJ IDEA, PhpStorm, WebStorm), VS Code
+- Linux / Unix environments
+
+---
+
+## 5. Professional Work Experience
+
+### Eiffage Énergie Systèmes - Infra Nord
+- **Role:** Full Stack Developer Intern
+- **Timeframe:** April 2025 - July 2025
+- **Context:** Eiffage Énergie Systèmes is a European leader in electrical engineering, construction, and infrastructure maintenance.
+- **Project:** "Espace Pilotage" — A critical in-house Computerized Maintenance Management System (CMMS) used daily to oversee technical infrastructures such as urban video-protection networks and municipal maintenance contracts.
+- **Tech Stack:** Native PHP, JavaScript, MySQL, jQuery, Bootstrap.
+- **Key Achievements:**
+  - **Legacy Code Adaptation:** Integrated into a 5-year-old native PHP/JavaScript codebase, rapidly mastering architectural patterns to deploy high-value features without modern framework dependencies.
+  - **Advanced Logging Architecture:** Engineered a complete server-side logging system with an administrative dashboard offering granular level control (Info, Error, Debug) to monitor application uptime and health.
+  - **Performance & Debugging Tools:** Introduced server-side pagination and syntax highlighting for application logs, drastically reducing diagnostic time for the development team.
+  - **RMA Workflow Optimization:** Created a dynamic filtering and tracking system for Return Merchandise Agreements (RMA), enabling technicians to track defective hardware repairs in real-time.
+  - **Mobile-First Redesign:** Redesigned core ticket and equipment views to be fully responsive, empowering technicians in the field to update tickets directly from their smartphones.
+  - **UI/UX Enhancements:** Built seamless navigation bridges between maintenance tickets and equipment files, optimizing everyday technician workflows.
+
+---
+
+## 6. Projects Portfolio
+
+### 1. FeurNews — Real-Time Citizen Journalism Platform
+- **Type:** Academic Full-Stack Simulation
+- **Tech Stack:** React, TypeScript, Spring Boot, Tailwind CSS, Java
+- **Summary:** FeurNews is a social platform allowing users to broadcast, discuss, and evaluate news in real-time. Simulating an industrial environment, the project split roles between a React Frontend team and a Spring/MongoDB Backend team.
+- **Key Achievements:**
+  - Implemented authentication, full CRUD operations for posts, 5-star rating and comment systems, direct messaging, and user follow/block workflows.
+  - Worked against strict REST API specifications from the backend team under a 2-week daily Agile Scrum framework (Product Backlogs, Burn-up Charts, Sprint Retrospectives).
+
+### 2. Voiture de Crous — Car Rental Platform
+- **Type:** Intensive 1-Week MVP Sprint
+- **Tech Stack:** Angular, Laravel, PHP, TypeScript
+- **Summary:** Built in a team of 4 in just 7 days, this platform handles the complete car rental lifecycle from vehicle search to checkout and invoicing.
+- **Key Achievements:**
+  - Designed hierarchical management where Agencies supervise specific Agents and vehicle fleets with real-time availability checks.
+  - Engineered an automated post-booking pipeline generating PDF invoices and emailing them to clients upon reservation confirmation.
+
+### 3. Méditrip — 48-Hour Hackathon Platform
+- **Type:** Marathon du Web Hackathon
+- **Tech Stack:** Laravel, PHP, Git
+- **Summary:** A social platform for documenting and sharing Mediterranean travel itineraries, developed continuously from scratch over a 48-hour sprint.
+- **Key Achievements:**
+  - Led backend implementation within a cross-disciplinary team of 3 developers and 4 multimedia designers (MMI).
+  - Built trip step CRUD, social 'Like' systems, user profiles, and session security under strict deadlines.
+
+### 4. Laravel Portfolio — Custom Portfolio Platform
+- **Type:** Personal Project
+- **Tech Stack:** Laravel, PHP, Tailwind CSS, MySQL, JavaScript
+- **Summary:** Custom full-stack web application built from scratch to demonstrate production-grade Laravel skills and MVC architecture.
+- **Key Achievements:**
+  - Implemented secure access control (ACL) for moderation, dynamic reviews CRUD, and tailored Tailwind UI.
+
+### 5. Bomberman Remake — Classic Arcade Game Engine
+- **Type:** Software Engineering & OOP Case Study
+- **Tech Stack:** Java, Gradle
+- **Summary:** Reconstructed arcade game to apply strict OOP architectural design patterns.
+- **Key Achievements:**
+  - Implemented Factory, Singleton, and Strategy patterns for decoupled logic.
+  - Developed autonomous enemy AI, grid collision physics, and an extensible bonus/power-up polymorphism system.
+
+### 6. Le Juste Prix — Dynamic Pricing Game
+- **Type:** Web Gaming & Scraping Project
+- **Tech Stack:** Python, Flask
+- **Summary:** Web adaptation of "The Price is Right" with automated real-time e-commerce scraping.
+- **Key Achievements:**
+  - Integrated scraping API to auto-fetch Amazon item details from product links.
+  - Programmed multiple game modes (Easy, Hard, Multiplayer comparison) with global leaderboards.

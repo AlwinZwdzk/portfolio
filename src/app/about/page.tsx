@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import {person, about, social, projects} from '@/resources/content';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -8,6 +9,21 @@ import SchoolIcon from '@mui/icons-material/School';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import SkillCard from "@/components/SkillCard";
+
+export const metadata: Metadata = {
+    title: "About Me",
+    description:
+        "Learn about Alwin Zawadzki: academic journey at Lens Institute of Technology, software engineering background, and technical skills.",
+    alternates: {
+        canonical: "/about",
+    },
+    openGraph: {
+        title: "About Me | Alwin Zawadzki",
+        description:
+            "Learn about Alwin Zawadzki: academic journey, software engineering background, and technical skills.",
+        url: "/about",
+    },
+};
 
 export default function About() {
     return (

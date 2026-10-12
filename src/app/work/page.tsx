@@ -1,6 +1,22 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { work } from '@/resources/content';
 import WorkCard from '@/components/WorkCard';
+
+export const metadata: Metadata = {
+    title: "Work Experience",
+    description:
+        "Discover Alwin Zawadzki's professional journey, software engineering internships, technical achievements, and industrial experience.",
+    alternates: {
+        canonical: "/work",
+    },
+    openGraph: {
+        title: "Work Experience | Alwin Zawadzki",
+        description:
+            "Discover Alwin Zawadzki's professional journey, internships, and industrial software engineering experience.",
+        url: "/work",
+    },
+};
 
 export default function WorkPage() {
     return (

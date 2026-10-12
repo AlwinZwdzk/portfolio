@@ -1,0 +1,34 @@
+# Alwin Zawadzki — Full-stack Developer Portfolio
+
+> Alwin Zawadzki is a Full-stack Developer and Computer Science Bachelor graduate (BUT Informatique, Application Development specialization) from Lens Institute of Technology (IUT de Lens, France). He is actively seeking an international internship (Erasmus+ program) to contribute to software engineering projects and broaden his technical expertise.
+
+## Core Profile
+- Name: Alwin Zawadzki
+- Role: Full-stack Developer & Software Engineer
+- Education: Bachelor of Technology in Computer Science (BUT Informatique) — Lens Institute of Technology (2023 - 2026)
+- Objective: Seeking an international software engineering internship (Erasmus+ scholarship eligible)
+- Languages: French (Native), English (Fluent)
+- Location: Hauts-de-France, France (Open to relocation abroad)
+
+## Contact & Links
+- Website: https://alwin-zawadzki.fr
+- Email: alwin.zawadzki@gmail.com
+- GitHub: https://github.com/AlwinZwdzk
+- LinkedIn: https://www.linkedin.com/in/alwin-zawadzki/
+- Curriculum Vitae: https://alwin-zawadzki.fr/documents/alwin_zawadzki_cv.pdf
+
+## Technical Expertise
+- Programming Languages: TypeScript, JavaScript, Python, Java, PHP, C, SQL, Bash
+- Web & Frameworks: React, Next.js, Flask, Spring Boot, Laravel, Tailwind CSS, Bootstrap, jQuery, Angular
+- Databases: PostgreSQL, MySQL, MongoDB, Neo4j
+- Tooling & DevOps: Docker, Git, GitLab CI, Gradle, Linux, JetBrains IDEs
+
+## Main Portfolio Sections
+- [Home](https://alwin-zawadzki.fr/): Welcoming introduction, status, and direct contact buttons.
+- [About](https://alwin-zawadzki.fr/about): Background, education details at Lens Institute of Technology, and categorized skill badges.
+- [Projects](https://alwin-zawadzki.fr/projects): Complete list of software engineering and web applications.
+- [Work Experience](https://alwin-zawadzki.fr/work): Industrial software engineering journey, including full-stack work at Eiffage Énergie Systèmes.
+
+## Full Dossier for AI Models
+For an exhaustive, plain-text dossier containing complete descriptions, technical architectures, and key achievements of all projects and work experiences, see:
+- [llms-full.txt](https://alwin-zawadzki.fr/llms-full.txt)

@@ -1,0 +1,37 @@
+export const siteConfig = {
+  name: "Alwin Zawadzki",
+  role: "Junior Full-stack Developer",
+  title: "Alwin Zawadzki | Junior Full-stack Developer Portfolio",
+  description:
+    "Portfolio of Alwin Zawadzki, Computer Science Bachelor graduate seeking an international internship (Erasmus+). Explore my software engineering projects, professional experience, and technical skills.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://alwin-zawadzki.vercel.app",
+  ogImage: "/images/avatar.webp",
+  links: {
+    github: "https://github.com/AlwinZwdzk",
+    linkedin: "https://www.linkedin.com/in/alwin-zawadzki/",
+    email: "mailto:alwin.zawadzki@gmail.com",
+    cv: "/documents/alwin_zawadzki_cv.pdf",
+  },
+  keywords: [
+    "Alwin Zawadzki",
+    "Software Engineer",
+    "Full-stack Developer",
+    "Computer Science Bachelor",
+    "BUT Informatique",
+    "Erasmus+ Internship",
+    "International Internship",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Python",
+    "Java",
+    "PHP",
+    "Tailwind CSS",
+    "Web Developer Portfolio",
+  ],
+  author: {
+    name: "Alwin Zawadzki",
+    url: "https://alwin-zawadzki.fr",
+  },
+};

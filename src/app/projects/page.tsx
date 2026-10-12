@@ -1,6 +1,22 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { projects } from '@/resources/content';
 import ProjectCard from '@/components/ProjectCard';
+
+export const metadata: Metadata = {
+    title: "Projects",
+    description:
+        "Explore software engineering and web development projects by Alwin Zawadzki, featuring full-stack applications, interactive systems, and modern web frameworks.",
+    alternates: {
+        canonical: "/projects",
+    },
+    openGraph: {
+        title: "Projects | Alwin Zawadzki",
+        description:
+            "Explore software engineering and web development projects by Alwin Zawadzki.",
+        url: "/projects",
+    },
+};
 
 export default function Projects() {
     return (

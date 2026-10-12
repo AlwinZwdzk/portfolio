@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { work } from '@/resources/content';
@@ -19,6 +20,51 @@ export async function generateStaticParams() {
     return work.experiences.map((exp) => ({
         slug: getSlug(exp.company),
     }));
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const { slug } = await params;
+    const experience = work.experiences.find((exp) => getSlug(exp.company) === slug);
+
+    if (!experience) {
+        return {
+            title: "Experience Not Found",
+        };
+    }
+
+    const firstImage = experience.images?.[0]?.src;
+    const description = `${experience.role} at ${experience.company} (${experience.timeframe}). ${experience.description.slice(0, 140)}...`;
+
+    return {
+        title: `${experience.company} (${experience.role})`,
+        description,
+        alternates: {
+            canonical: `/work/${slug}`,
+        },
+        openGraph: {
+            title: `${experience.company} — ${experience.role} | Alwin Zawadzki`,
+            description,
+            url: `/work/${slug}`,
+            images: firstImage
+                ? [
+                      {
+                          url: firstImage,
+                          alt: experience.company,
+                      },
+                  ]
+                : undefined,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${experience.company} — ${experience.role} | Alwin Zawadzki`,
+            description,
+            images: firstImage ? [firstImage] : undefined,
+        },
+    };
 }
 
 export default async function WorkDetail({ params }: { params: Promise<{ slug: string }> }) {
